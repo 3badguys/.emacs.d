@@ -22,6 +22,12 @@
 				iedit
 				geiser
 				paredit
+				windresize
+				window-numbering
+				which-key
+				helm-ag
+				ggtags
+				ace-jump-mode
 				) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)

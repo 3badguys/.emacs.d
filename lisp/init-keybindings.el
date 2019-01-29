@@ -22,4 +22,23 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
+(require 'windresize)
+(global-set-key (kbd "C-c r") 'windresize)
+(global-set-key (kbd "C-c <left>") 'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>") 'windmove-up)
+(global-set-key (kbd "C-c <down>") 'windmove-down)
+
+(require 'helm-ag)
+(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode" t)
+(eval-after-load "ace-jump-mode"
+  '(ace-jump-mode-enable-mark-sync))
+
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
+
 (provide 'init-keybindings)

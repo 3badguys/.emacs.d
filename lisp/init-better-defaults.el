@@ -88,8 +88,15 @@
   (call-interactively 'occur))
 (global-set-key (kbd "M-s o") 'occur-dwim)
 
-; (setq scheme-program-name "chez")
-; (setq geiser-chez--binary "chez")
-; (setq geiser-activate-implementation '(chez))
+(require 'window-numbering)
+(window-numbering-mode 1)
+
+(require 'which-key)
+(which-key-mode 1)
+
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
 
 (provide 'init-better-defaults)
