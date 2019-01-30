@@ -28,6 +28,7 @@
 				helm-ag
 				ggtags
 				ace-jump-mode
+				symbol-overlay
 				) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)

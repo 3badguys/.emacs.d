@@ -148,4 +148,11 @@
 	    (define-key scheme-mode-map (kbd "<f5>") 'scheme-send-last-sexp-split-window)
 	    (define-key scheme-mode-map (kbd "<f6>") 'scheme-send-definition-split-window)))
 
+(require 'symbol-overlay)
+(global-set-key (kbd "<f7>") 'symbol-overlay-mode)
+(global-set-key (kbd "<f8>") 'symbol-overlay-put)
+(global-set-key (kbd "<f9>") 'symbol-overlay-remove-all)
+(global-set-key (kbd "M-n") 'symbol-overlay-switch-forward)
+(global-set-key (kbd "M-p") 'symbol-overlay-switch-backward)
+
 (provide 'init-better-defaults)
