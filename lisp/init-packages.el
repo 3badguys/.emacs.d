@@ -29,6 +29,7 @@
 				ggtags
 				ace-jump-mode
 				symbol-overlay
+				cnfonts
 				) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)

@@ -155,4 +155,7 @@
 (global-set-key (kbd "M-n") 'symbol-overlay-switch-forward)
 (global-set-key (kbd "M-p") 'symbol-overlay-switch-backward)
 
+(require 'cnfonts)
+(cnfonts-enable)
+
 (provide 'init-better-defaults)
