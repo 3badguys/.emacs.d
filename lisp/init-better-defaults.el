@@ -158,4 +158,10 @@
 (require 'cnfonts)
 (cnfonts-enable)
 
+(require 'session)
+(add-hook 'after-init-hook 'session-initialize)
+
+(require 'desktop)
+(desktop-save-mode t)
+
 (provide 'init-better-defaults)

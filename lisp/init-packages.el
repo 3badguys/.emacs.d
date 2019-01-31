@@ -30,6 +30,7 @@
 				ace-jump-mode
 				symbol-overlay
 				cnfonts
+				session
 				) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
