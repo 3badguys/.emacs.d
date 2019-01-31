@@ -164,4 +164,11 @@
 (require 'desktop)
 (desktop-save-mode t)
 
+;; (require 'cedet)
+(add-to-list 'load-path "~/.emacs.d/git_repo/ecb")
+(when (require 'ecb nil 'noerror)
+  (setq ecb-tip-of-the-day nil)
+  (setq ecb-auto-compatibility-check nil)
+  (setq ecb-primary-secondary-mouse-buttons 'mouse-1--C-mouse-1))
+
 (provide 'init-better-defaults)

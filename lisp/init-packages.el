@@ -31,6 +31,7 @@
 				symbol-overlay
 				cnfonts
 				session
+				;; ecb
 				) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
