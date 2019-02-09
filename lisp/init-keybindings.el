@@ -12,7 +12,7 @@
 ;; (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 (global-set-key "\C-x\ \C-r" 'helm-recentf)
 
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 
 (global-set-key (kbd "C-h C-f") 'find-function)
 (global-set-key (kbd "C-h C-v") 'find-variable)
