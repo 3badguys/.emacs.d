@@ -1,1 +1,0 @@
-# The configuration of emacs
