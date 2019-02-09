@@ -32,6 +32,7 @@
 				cnfonts
 				session
 				;; ecb
+				w3m
 				) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
@@ -132,5 +133,15 @@
 (global-set-key (kbd "M-s e") 'iedit-mode)
 
 (setq geiser-active-implementations '(chez))
+
+(require 'w3m)
+(setq w3m-home-page "http://www.google.com.hk")
+;(require 'mime-w3m)
+(setq w3m-default-display-inline-images t)
+(setq w3m-default-toggle-inline-images t)
+(setq w3m-show-graphic-icons-in-header-line t)
+(setq w3m-show-graphic-icons-in-mode-line t)
+(setq w3m-use-cookies t)
+(setq w3m-command-arguments '("-cookie" "-F"))
 
 (provide 'init-packages)
