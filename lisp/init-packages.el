@@ -119,7 +119,8 @@
 	  (lambda ()
 	    (setq imenu-create-index-function 'js2-imenu-make-index)))
 
-(global-set-key (kbd "M-s i") 'counsel-imenu)
+;; (global-set-key (kbd "M-s i") 'counsel-imenu)
+(global-set-key (kbd "M-s i") 'helm-semantic-or-imenu)
 
 ;; (load-theme 'monokai t)
 ;; (load-theme 'solarized-dark t)
