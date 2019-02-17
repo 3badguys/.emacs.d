@@ -232,6 +232,17 @@ SCHEDULED: <2019-01-18 五> DEADLINE: <2019-02-23 六>
 #+RESULTS:
 : 10
 
+#+BEGIN_SRC C :results output
+#include <stdio.h>
+int main(void) {
+  printf("Hello world!\n");
+  return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+: Hello world!
+
 ** 导出
 | 快捷键  | 描述 |
 |---------+------|
