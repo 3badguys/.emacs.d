@@ -5,4 +5,8 @@
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+(setq org-startup-indented t)
+
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+
 (provide 'init-org)
