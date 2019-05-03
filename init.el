@@ -12,18 +12,14 @@
 
 ;; Add the golang exec path
 (setq gopaths '("/usr/local/go/bin"
-		;;		(expand-file-name "bin" (substitute-in-file-name "$HOME/gocode/"))
-		"/home/chuic456/gocode/bin"
-		))
+		        ;;		(expand-file-name "bin" (substitute-in-file-name "$HOME/gocode/"))
+		        "/home/chuic456/gocode/bin"
+		        ))
 (setenv "PATH" (concat (getenv "PATH")
-		       (mapconcat 'identity gopaths ":")
-		       ))
+		               (mapconcat 'identity gopaths ":")
+		               ))
 (setq exec-path (append gopaths exec-path))
 
-;; add more personal func
-;; new init-func.el
-
-;; (require 'init-func.el)
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-better-defaults)
