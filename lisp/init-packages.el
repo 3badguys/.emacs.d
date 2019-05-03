@@ -34,6 +34,9 @@
 				;; ecb
 				w3m
 				htmlize
+				auto-complete
+				go-mode
+				go-autocomplete
 				) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
@@ -60,11 +63,12 @@
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 
-;; config js2-mode for js files
+;; config auto-mode-alist
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode)
 	 ("\\.html\\'" . web-mode)
+	 ("\\.go\\'" . go-mode)
 	 )
        auto-mode-alist))
 
@@ -145,5 +149,24 @@
 (setq w3m-show-graphic-icons-in-mode-line t)
 (setq w3m-use-cookies t)
 (setq w3m-command-arguments '("-cookie" "-F"))
+
+(add-hook 'before-save-hook 'gofmt-before-save)
+
+(add-to-list 'load-path "~/gocode/src/github.com/dougm/goflymake")
+(require 'go-flymake)
+
+;; auto complete for go
+(defun auto-complete-for-go ()
+  (auto-complete-mode 1))
+(add-hook 'go-mode-hook 'auto-complete-for-go)
+(with-eval-after-load 'go-mode
+  (require 'go-autocomplete))
+
+;; config for tab key
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
+(setq-default c-basic-offset 4)
+(setq c-default-style "linux")
 
 (provide 'init-packages)
