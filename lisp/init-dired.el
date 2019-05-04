@@ -9,7 +9,7 @@
 
 (setq dired-dwim-target t)
 
-(with-eval-after-load 'dired
+(after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
 ;; TODO: what's the target of dwin?

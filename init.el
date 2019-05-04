@@ -12,6 +12,7 @@
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+(require 'init-utils)
 ;; Call (package-initialize)
 (require 'init-elpa)      ;; Install required packages
 (require 'init-exec-path) ;; Set up $PATH

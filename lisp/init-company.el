@@ -1,5 +1,5 @@
 ;;; init-company.el --- Config for company mode
 
-(global-company-mode t)
+(add-hook 'after-init-hook 'global-company-mode)
 
 (provide 'init-company)

@@ -7,8 +7,7 @@
 
 (setq inhibit-splash-screen t)
 
-(setq-default cursor-type 'box)
-; (setq-default cursor-type 'bar)
+(setq-default cursor-type 'box)  ;; bar or box
 
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 

@@ -1,11 +1,7 @@
 ;;; init-go.el --- Config for golang
 
-;; add .go to auto-mode-alist
-(setq auto-mode-alist
-      (append
-       '(("\\.go\\'" . go-mode)
-	     )
-       auto-mode-alist))
+;; add go-mode to auto-mode-alist
+(add-auto-mode 'go-mode "\\.go\\'")
 
 ;; run gofmt before save the file
 (add-hook 'before-save-hook 'gofmt-before-save)

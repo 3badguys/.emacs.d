@@ -1,5 +1,22 @@
 ;;; init-edit-utils.el --- Day-to-day editing helpers
 
+;; some base preferences
+(global-linum-mode t)
+(global-hl-line-mode t)
+
+(setq-default
+ indent-tabs-mode nil
+ tab-width 4
+ make-backup-files nil
+ auto-save-default nil
+ delete-selection-mode t)
+
+;; hungry-delete mode
+(global-hungry-delete-mode)
+
+;; change yes-or-no to y-or-n
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; indent the text content
 (defun indent-buffer()
   (interactive)
@@ -35,35 +52,13 @@
   (goto-char (point-min))
   (while (search-forward "\r" nil t) (replace-match "")))
 
-;; hungry-delete mode
-(global-hungry-delete-mode)
-
-;; config for tab key
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-
-;; show line number
-(global-linum-mode t)
-
-;; highlight the current line
-(global-hl-line-mode t)
-
 ;; symbol-overlay mode for highlighting the symbol
 (require 'symbol-overlay)
-(global-set-key (kbd "<f7>") 'symbol-overlay-mode)
-(global-set-key (kbd "<f8>") 'symbol-overlay-put)
-(global-set-key (kbd "<f9>") 'symbol-overlay-remove-all)
-(global-set-key (kbd "M-n") 'symbol-overlay-switch-forward)
-(global-set-key (kbd "M-p") 'symbol-overlay-switch-backward)
-
-;; no backup
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-
-;; delete the selection
-(delete-selection-mode t)
-
-;; change yes-or-no to y-or-n
-(fset 'yes-or-no-p 'y-or-n-p)
+(after-load 'symbol-overlay
+  (global-set-key (kbd "<f7>") 'symbol-overlay-mode)
+  (global-set-key (kbd "<f8>") 'symbol-overlay-put)
+  (global-set-key (kbd "<f9>") 'symbol-overlay-remove-all)
+  (global-set-key (kbd "M-n") 'symbol-overlay-switch-forward)
+  (global-set-key (kbd "M-p") 'symbol-overlay-switch-backward))
 
 (provide 'init-edit-utils)
