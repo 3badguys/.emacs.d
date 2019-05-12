@@ -40,6 +40,7 @@
 (require 'init-lisp)
 (require 'init-c)
 (require 'init-go)
+(require 'init-perl)
 
 ;; Variables configured via the interactive 'customize' interface
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))

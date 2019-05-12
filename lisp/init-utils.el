@@ -14,4 +14,10 @@
   (dolist (pattern patterns)
     (add-to-list 'auto-mode-alist (cons pattern mode))))
 
+;; Handier way to add modes to interpreter-mode-alist
+(defun add-interpreter-mode (mode &rest patterns)
+  "Add entries to `interpreter-mode-alist` to use `MODE` for all given file `PATTERNS`."
+  (dolist (pattern patterns)
+    (add-to-list 'interpreter-mode-alist (cons pattern mode))))
+
 (provide 'init-utils)
