@@ -10,6 +10,8 @@
 (when (version< emacs-version "25.1")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
+(setq emacs-load-start-time (current-time))
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-utils)
@@ -49,5 +51,9 @@
 
 ;; Allow users to provide an option "init-local" containing presonal settings
 (require 'init-local nil t)
+
+(when (require 'time-date nil t)
+  (message "Emacs startup time: %d seconds."
+           (time-to-seconds (time-since emacs-load-start-time))))
 
 (provide 'init)
