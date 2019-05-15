@@ -14,43 +14,47 @@
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-(require 'init-utils)
-;; Call (package-initialize)
-(require 'init-elpa)      ;; Install required packages
-(require 'init-exec-path) ;; Set up $PATH
+;; Normally file-name-handler-alist is set to
+;; (("\\`/[^/]*\\'" . tramp-completion-file-name-handler)
+;; ("\\`/[^/|:][^/|]*:" . tramp-file-name-handler)
+;; ("\\`/:" . file-name-non-special))
+;; Which means on every .el and .elc file loaded during start up, it has to runs those regexps against the filename.
+(let* ((file-name-handler-alist nil))
+  (require 'init-utils)
+  ;; Call (package-initialize)
+  (require 'init-elpa)      ;; Install required packages
+  (require 'init-exec-path) ;; Set up $PATH
 
-;; Allow users to provide an optional "init-preload-local.el"
-(require 'init-preload-local nil t)
+  ;; Allow users to provide an optional "init-preload-local.el"
+  (require 'init-preload-local nil t)
 
-;; Load configs for specific features and modes
-(require 'init-gui-frames)
-(require 'init-windows)
-(require 'init-sessions)
-(require 'init-edit-utils)
-(require 'init-company)
-(require 'init-cnfonts)
-(require 'init-search) ;; Search file, content, command, etc.
-(require 'init-abbrev)
-(require 'init-hippie-expand)
-(require 'init-recentf)
-(require 'init-dired)
-(require 'init-paredit)
-(require 'init-which-key)
-(require 'init-iedit)
-(require 'init-popwin)
-(require 'init-org)
-(require 'init-lisp)
-(require 'init-c)
-(require 'init-go)
-(require 'init-perl)
+  ;; Load configs for specific features and modes
+  (require 'init-gui-frames)
+  (require 'init-windows)
+  (require 'init-sessions)
+  (require 'init-edit-utils)
+  (require 'init-company)
+  (require 'init-cnfonts)
+  (require 'init-search) ;; Search file, content, command, etc.
+  (require 'init-abbrev)
+  (require 'init-hippie-expand)
+  (require 'init-recentf)
+  (require 'init-dired)
+  (require 'init-paredit)
+  (require 'init-which-key)
+  (require 'init-iedit)
+  (require 'init-popwin)
+  (require 'init-org)
+  (require 'init-lisp)
+  (require 'init-c)
+  (require 'init-go)
+  (require 'init-perl)
 
-;; Variables configured via the interactive 'customize' interface
-(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
-(when (file-exists-p custom-file)
-  (load custom-file))
+  ;; Variables configured via the interactive 'customize' interface
+  (load (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory)) t t)
 
-;; Allow users to provide an option "init-local" containing presonal settings
-(require 'init-local nil t)
+  ;; Allow users to provide an option "init-local" containing presonal settings
+  (require 'init-local nil t))
 
 (when (require 'time-date nil t)
   (message "Emacs startup time: %d seconds."
