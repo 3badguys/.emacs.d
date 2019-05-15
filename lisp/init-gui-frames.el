@@ -6,7 +6,9 @@
 (setq inhibit-splash-screen t)
 
 ;; show a marker in the left fringe for lines not in the buffer
-(setq indicate-empty-lines t)
+(setq-default indicate-empty-lines t)
+(when (not indicate-empty-lines)
+  (toggle-indicate-empty-lines))
 
 ;; full screen after init emacs
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
