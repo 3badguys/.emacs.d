@@ -10,6 +10,13 @@
 (when (version< emacs-version "25.1")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
+(defvar best-gc-cons-threshold
+  4000000
+  "Best default gc threshold value.  Should NOT be too big!")
+
+;; don't GC during startup to save time
+(setq gc-cons-threshold most-positive-fixnum)
+
 (setq emacs-load-start-time (current-time))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -55,6 +62,8 @@
 
   ;; Allow users to provide an option "init-local" containing presonal settings
   (require 'init-local nil t))
+
+(setq gc-cons-threshold best-gc-cons-threshold)
 
 (when (require 'time-date nil t)
   (message "Emacs startup time: %d seconds."
