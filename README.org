@@ -2,32 +2,30 @@
 emacs配置文件 
 
 * 使用的插件
-+ company
-+ hungry-delete
-+ swiper
-+ counsel
-+ smartparens
-+ js2-mode
-+ nodejs-repl
-+ popwin
-+ web-mode
-+ js2-refactor
-+ expand-region
-+ iedit
-+ geiser
-+ paredit
-+ windresize
-+ window-numbering
-+ which-key
-+ helm-ag
-+ ggtags
-+ ace-jump-mode
-+ symbol-overlay
-+ cnfonts
-+ session
-+ ecb
-+ w3m
-+ htmlize
+ + htmlizeexec-path-from-shell
+ + company
+ + hungry-delete
+ + swiper
+ + counsel
+ + smartparens
+ + popwin
+ + expand-region
+ + iedit
+ + geiser
+ + paredit
+ + windresize
+ + window-numbering
+ + which-key
+ + helm-ag
+ + ggtags
+ + ace-jump-mode
+ + symbol-overlay
+ + cnfonts
+ + session
+ + htmlize
+ + auto-complete
+ + go-mode
+ + go-autocomplete
 
 * 按键映射
 | 符号 | 键    |
