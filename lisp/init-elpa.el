@@ -12,30 +12,30 @@
 (defvar chuic456_emacs/packages '(
                                   exec-path-from-shell
                                   magit
-				                  company
-				                  hungry-delete
-				                  swiper
-				                  counsel
-				                  smartparens
-				                  popwin
-				                  expand-region
-				                  iedit
-				                  geiser
-				                  paredit
-				                  windresize
-				                  window-numbering
-				                  which-key
-				                  helm-ag
-				                  ggtags
-				                  ace-jump-mode
-				                  symbol-overlay
-				                  cnfonts
-				                  session
-				                  htmlize
-				                  auto-complete
-				                  go-mode
-				                  go-autocomplete
-				                  ) "Default packages")
+                                  company
+                                  hungry-delete
+                                  swiper
+                                  counsel
+                                  smartparens
+                                  popwin
+                                  expand-region
+                                  iedit
+                                  geiser
+                                  paredit
+                                  windresize
+                                  window-numbering
+                                  which-key
+                                  helm-ag
+                                  ggtags
+                                  ace-jump-mode
+                                  symbol-overlay
+                                  cnfonts
+                                  session
+                                  htmlize
+                                  auto-complete
+                                  go-mode
+                                  go-autocomplete
+                                  ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
 
