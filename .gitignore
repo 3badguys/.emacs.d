@@ -6,3 +6,4 @@ eshell/
 .emacs.desktop
 .emacs.desktop.lock
 ac-comphist.dat
+transient/

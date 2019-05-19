@@ -133,7 +133,7 @@
 	  ((:url . "https://github.com/Malabarba/beacon")
 	   (:keywords "convenience"))])
  (bnf-mode .
-	   [(0 4 1)
+	   [(0 4 2)
 	    ((cl-lib
 	      (0 5))
 	     (emacs
@@ -426,9 +426,9 @@
 	     ((:url . "http://elpa.gnu.org/packages/ediprolog.html")
 	      (:keywords "languages" "processes"))])
  (eev .
-      [(20190410)
+      [(20190425)
        ((emacs
-	 (24 3)))
+	 (24 1)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
        ((:keywords "lisp" "e-scripts")
 	(:url . "http://angg.twu.net/#eev"))])

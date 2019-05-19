@@ -11,6 +11,7 @@
 ;; Add Packages
 (defvar chuic456_emacs/packages '(
                                   exec-path-from-shell
+                                  magit
 				                  company
 				                  hungry-delete
 				                  swiper
