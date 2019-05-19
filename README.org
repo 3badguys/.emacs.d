@@ -2,7 +2,8 @@
 emacs配置文件 
 
 * 使用的插件
- + htmlizeexec-path-from-shell
+ + htmlize
+ + exec-path-from-shell
  + company
  + hungry-delete
  + swiper
@@ -26,6 +27,10 @@ emacs配置文件
  + auto-complete
  + go-mode
  + go-autocomplete
+
+* 参考资料
++ [[file:reference/GNU%20Emacs%20Reference%20Card.pdf][GNU Emacs Reference Card]]
++ [[file:reference/Long%20Emacs%20Reference%20Card.pdf][Long Emacs Reference Card]]
 
 * 按键映射
 | 符号 | 键    |
