@@ -17,8 +17,8 @@
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 ;; no scroll bar
-(when (fboundp 'set-scroll-bar-mode)
-  (set-scroll-bar-mode -1))
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
 ;; no menu bar
 (when (fboundp 'menu-bar-mode)
   (menu-bar-mode -1))
