@@ -26,4 +26,9 @@
 ;; set cursor type, bar or box
 (setq-default cursor-type 'box)
 
+;; Time management
+(setq display-time-24hr-format t) ; the date in modeline is English too, magic
+(setq display-time-day-and-date t)
+(display-time-mode) ; show date in modeline
+
 (provide 'init-gui-frames)
