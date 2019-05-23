@@ -35,6 +35,7 @@
                                   auto-complete
                                   go-mode
                                   go-autocomplete
+                                  emms
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
