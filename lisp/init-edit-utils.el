@@ -81,6 +81,7 @@
 
 ;; smooth-scrolling mode
 (require 'smooth-scrolling)
-(smooth-scrolling-mode 1)
+(smooth-scrolling-mode t)
+(setq smooth-scroll-margin 3)
 
 (provide 'init-edit-utils)
