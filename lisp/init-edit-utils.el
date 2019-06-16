@@ -79,4 +79,8 @@
   (global-set-key (kbd "M-n") 'symbol-overlay-switch-forward)
   (global-set-key (kbd "M-p") 'symbol-overlay-switch-backward))
 
+;; smooth-scrolling mode
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
+
 (provide 'init-edit-utils)
