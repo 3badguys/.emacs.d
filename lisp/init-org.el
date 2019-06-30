@@ -23,6 +23,7 @@
      (latex . t)
      (python . t)
      (,(if (locate-library "ob-sh") 'sh 'shell) . t)
+     (lisp . t)
      (ditaa . t)
      (plantuml . t))))
 

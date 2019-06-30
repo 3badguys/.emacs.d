@@ -67,4 +67,8 @@
 ;; geiser
 (setq geiser-active-implementations '(chez))
 
+;; slime
+(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq slime-contribs '(slime-fancy))
+
 (provide 'init-lisp)

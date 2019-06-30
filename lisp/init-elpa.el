@@ -21,6 +21,7 @@
                                   expand-region
                                   iedit
                                   geiser
+                                  slime
                                   paredit
                                   windresize
                                   window-numbering
