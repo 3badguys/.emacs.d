@@ -64,6 +64,13 @@
   ;; Allow users to provide an option "init-local" containing presonal settings
   (require 'init-local nil t))
 
+;; Allow access from emacsclient
+(add-hook 'after-init-hook
+          (lambda ()
+            (require 'server)
+            (unless (server-running-p)
+              (server-start))))
+
 (setq gc-cons-threshold best-gc-cons-threshold)
 
 (when (require 'time-date nil t)
