@@ -10,6 +10,11 @@
 (when (version< emacs-version "25.1")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
+;; Open init.el config file
+(defun open-init-el()
+  (interactive)
+  (find-file (expand-file-name "init.el" user-emacs-directory)))
+
 (defvar best-gc-cons-threshold
   4000000
   "Best default gc threshold value.  Should NOT be too big!")
