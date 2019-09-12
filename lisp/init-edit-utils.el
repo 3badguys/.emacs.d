@@ -11,6 +11,9 @@
  auto-save-default nil
  delete-selection-mode t)
 
+;; auto revert
+(global-auto-revert-mode)
+
 ;; hungry-delete mode
 (global-hungry-delete-mode)
 
