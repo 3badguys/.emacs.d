@@ -37,6 +37,7 @@
                                   go-autocomplete
                                   emms
                                   smooth-scrolling
+                                  tabbar
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)

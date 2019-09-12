@@ -37,6 +37,7 @@
 
   ;; Load configs for specific features and modes
   (require 'init-gui-frames)
+  (require 'init-tabbar)
   (require 'init-windows)
   (require 'init-sessions)
   (require 'init-edit-utils)
