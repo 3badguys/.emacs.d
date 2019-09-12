@@ -26,7 +26,6 @@
                                   windresize
                                   window-numbering
                                   which-key
-                                  helm-ag
                                   ggtags
                                   ace-jump-mode
                                   symbol-overlay

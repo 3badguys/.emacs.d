@@ -6,27 +6,23 @@
   (setq-default ivy-use-virtual-buffers t
                 enable-recursive-minibuffers t))
 
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-
-;; counsel
-(add-hook 'after-init-hook 'counsel-mode)
-(global-set-key (kbd "C-h f") 'counsel-describe-function)
-(global-set-key (kbd "C-h v") 'counsel-describe-variable)
-(global-set-key (kbd "C-c p f") 'counsel-git)
-
 ;; swiper
 (global-set-key "\C-s" 'swiper)
 
-;; helm
-(add-hook 'after-init-hook 'helm-mode)
-(global-set-key (kbd "M-s i") 'helm-semantic-or-imenu)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key "\C-x\ \C-r" 'helm-recentf)
-(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(setq ivy-initial-inputs-alist nil)
 
-(require 'helm-ag)
-(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+;; counsel
+(add-hook 'after-init-hook 'counsel-mode)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key "\C-x\ \C-r" 'counsel-recentf)
+(global-set-key (kbd "C-x C-b") 'counsel-ibuffer)
+(global-set-key (kbd "C-h f") 'counsel-describe-function)
+(global-set-key (kbd "C-h v") 'counsel-describe-variable)
+(global-set-key (kbd "C-c p f") 'counsel-git)
+(global-set-key (kbd "C-c p s") 'counsel-ag)
+(global-set-key (kbd "M-s i") 'counsel-semantic-or-imenu)
 
 ;; ace-jump
 (autoload
