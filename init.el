@@ -60,6 +60,7 @@
   (require 'init-iedit)
   (require 'init-popwin)
   (require 'init-org)
+  (require 'init-tags)
   (require 'init-lisp)
   (require 'init-c)
   (require 'init-go)

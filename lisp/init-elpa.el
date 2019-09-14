@@ -26,7 +26,7 @@
                                   windresize
                                   window-numbering
                                   which-key
-                                  ggtags
+                                  ;; ggtags
                                   ace-jump-mode
                                   symbol-overlay
                                   cnfonts
