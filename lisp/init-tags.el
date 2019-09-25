@@ -4,7 +4,9 @@
 (defun create-tags (dir-name)
   "Create tags file."
   (interactive "DTAG-Root: ")
-  (shell-command
+  (start-process-shell-command
+   ""
+   nil
    (format "ctags -f TAGS -e -R %s" (directory-file-name dir-name))))
 
 ;; ggtags
