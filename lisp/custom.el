@@ -8,8 +8,7 @@
  '(custom-safe-themes
    (quote
     ("c3d4af771cbe0501d5a865656802788a9a0ff9cf10a7df704ec8b8ef69017c68" default)))
- '(popwin:popup-window-position (quote right))
- '(popwin:popup-window-width 80))
+ '(popwin:popup-window-position (quote bottom)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
