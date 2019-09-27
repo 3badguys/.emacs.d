@@ -16,6 +16,8 @@
                                   hungry-delete
                                   swiper
                                   counsel
+                                  helm-ag
+                                  helm-rg
                                   smartparens
                                   popwin
                                   expand-region
