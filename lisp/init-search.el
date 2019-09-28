@@ -21,7 +21,7 @@
 (global-set-key (kbd "C-h f") 'counsel-describe-function)
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 (global-set-key (kbd "C-c p f") 'counsel-git)
-(global-set-key (kbd "C-c p s") 'counsel-ag)
+(global-set-key (kbd "C-c p s") 'counsel-rg)
 (global-set-key (kbd "M-s i") 'counsel-semantic-or-imenu)
 
 ;; ace-jump
