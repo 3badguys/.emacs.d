@@ -30,6 +30,7 @@
                                   which-key
                                   ;; ggtags
                                   ace-jump-mode
+                                  multiple-cursors
                                   symbol-overlay
                                   cnfonts
                                   session

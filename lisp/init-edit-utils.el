@@ -73,6 +73,13 @@
 
 (global-set-key (kbd "C-c C-c") 'comment-eclipse)
 
+;; multiple-cursors mode
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
 ;; symbol-overlay mode for highlighting the symbol
 (require 'symbol-overlay)
 (after-load 'symbol-overlay
