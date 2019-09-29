@@ -14,6 +14,9 @@
 ;; auto revert
 (global-auto-revert-mode)
 
+;; set mark
+(global-set-key (kbd "C-<return>") 'set-mark-command)
+
 ;; hungry-delete mode
 (global-hungry-delete-mode)
 

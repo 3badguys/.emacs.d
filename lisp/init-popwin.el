@@ -6,4 +6,7 @@
 ;; xref
 (push "*xref*" popwin:special-display-config)
 
+;; BackTrace
+(push "*Backtrace*" popwin:special-display-config)
+
 (provide 'init-popwin)
