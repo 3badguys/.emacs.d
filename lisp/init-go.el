@@ -7,8 +7,8 @@
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 ;; config go-flymake
-(add-to-list 'load-path "~/gocode/src/github.com/dougm/goflymake")
-(require 'go-flymake)
+;; (add-to-list 'load-path "~/gocode/src/github.com/dougm/goflymake")
+;; (require 'go-flymake)
 
 ;; auto complete for go
 (defun auto-complete-for-go ()

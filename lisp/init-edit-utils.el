@@ -90,6 +90,9 @@
 (global-undo-tree-mode)
 (global-set-key (kbd "C-.") 'undo-tree-redo)
 (global-set-key (kbd "C-,") 'undo-tree-undo)
+;; cygwin+tmux can't type C-. & C-,
+(global-set-key "\M-[1;5n" 'undo-tree-redo)
+(global-set-key "\M-[1;5l" 'undo-tree-undo)
 
 ;; symbol-overlay mode for highlighting the symbol
 (require 'symbol-overlay)
