@@ -41,6 +41,7 @@
                                   emms
                                   smooth-scrolling
                                   tabbar
+                                  undo-tree
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)

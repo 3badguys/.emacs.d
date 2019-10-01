@@ -83,6 +83,12 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
+;; undo-tree mode
+(require 'undo-tree)
+(global-undo-tree-mode)
+(global-set-key (kbd "C-.") 'undo-tree-redo)
+(global-set-key (kbd "C-,") 'undo-tree-undo)
+
 ;; symbol-overlay mode for highlighting the symbol
 (require 'symbol-overlay)
 (after-load 'symbol-overlay
