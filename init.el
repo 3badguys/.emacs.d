@@ -65,6 +65,7 @@
   (require 'init-c)
   (require 'init-go)
   (require 'init-perl)
+  (require 'init-haskell)
   (require 'init-misc)
 
   ;; Variables configured via the interactive 'customize' interface

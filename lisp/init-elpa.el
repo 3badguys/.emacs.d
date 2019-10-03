@@ -42,6 +42,7 @@
                                   smooth-scrolling
                                   tabbar
                                   undo-tree
+                                  haskell-mode
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
