@@ -10,3 +10,4 @@ transient/
 emms/
 *.stackdump
 *.html
+.mc-lists.el
