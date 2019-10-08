@@ -47,6 +47,7 @@
   (require 'init-tabbar)
   (require 'init-windows)
   (require 'init-sessions)
+  (require 'init-shell)
   (require 'init-edit-utils)
   (require 'init-company)
   (require 'init-cnfonts)
