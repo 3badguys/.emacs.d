@@ -13,6 +13,7 @@
                                   exec-path-from-shell
                                   magit
                                   company
+                                  company-tabnine
                                   hungry-delete
                                   swiper
                                   counsel
