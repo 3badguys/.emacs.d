@@ -43,6 +43,7 @@
   (require 'init-preload-local nil t)
 
   ;; Load configs for specific features and modes
+  (require 'init-site-lisp)
   (require 'init-gui-frames)
   (require 'init-tabbar)
   (require 'init-windows)
@@ -50,6 +51,7 @@
   (require 'init-shell)
   (require 'init-edit-utils)
   (require 'init-company)
+  (require 'init-lsp)
   (require 'init-cnfonts)
   (require 'init-search) ;; Search file, content, command, etc.
   (require 'init-abbrev)

@@ -44,6 +44,10 @@
                                   tabbar
                                   undo-tree
                                   haskell-mode
+                                  lsp-mode
+                                  company-lsp
+                                  eglot
+                                  dash-functional
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
