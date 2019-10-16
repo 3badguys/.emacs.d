@@ -45,6 +45,7 @@
                                   undo-tree
                                   haskell-mode
                                   lsp-mode
+                                  lsp-ui
                                   company-lsp
                                   eglot
                                   dash-functional

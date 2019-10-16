@@ -11,3 +11,4 @@ emms/
 *.stackdump
 *.html
 .mc-lists.el
+.lsp-session-v1
