@@ -44,10 +44,10 @@
                                   tabbar
                                   undo-tree
                                   haskell-mode
-                                  lsp-mode
-                                  lsp-ui
-                                  company-lsp
-                                  eglot
+                                  ;; lsp-mode
+                                  ;; lsp-ui
+                                  ;; company-lsp
+                                  ;; eglot
                                   dash-functional
                                   ) "Default packages")
 
