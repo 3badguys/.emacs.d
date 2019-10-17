@@ -12,3 +12,4 @@ emms/
 *.html
 .mc-lists.el
 .lsp-session-v1
+anaconda-mode/

@@ -69,6 +69,7 @@
   (require 'init-go)
   (require 'init-perl)
   (require 'init-haskell)
+  (require 'init-python)
   (require 'init-misc)
 
   ;; Variables configured via the interactive 'customize' interface

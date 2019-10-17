@@ -49,6 +49,8 @@
                                   ;; company-lsp
                                   ;; eglot
                                   dash-functional
+                                  anaconda-mode
+                                  company-anaconda
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
