@@ -1,5 +1,9 @@
 ;;; init-tags.el --- Config for tags
 
+(setq tags-revert-without-query t)
+(setq tags-case-fold-search nil)
+(setq large-file-warning-threshold nil)
+
 ;; Create TAGS file through ctags asyn.
 (defun create-tags-async (dir-name)
   "Create tags file asyn."
