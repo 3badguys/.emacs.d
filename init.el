@@ -50,6 +50,7 @@
   (require 'init-sessions)
   (require 'init-shell)
   (require 'init-edit-utils)
+  (require 'init-spelling)
   (require 'init-company)
   (require 'init-lsp)
   (require 'init-cnfonts)
