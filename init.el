@@ -51,6 +51,7 @@
   (require 'init-shell)
   (require 'init-edit-utils)
   (require 'init-spelling)
+  (require 'init-folding)
   (require 'init-company)
   (require 'init-lsp)
   (require 'init-cnfonts)

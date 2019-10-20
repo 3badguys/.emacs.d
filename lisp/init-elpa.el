@@ -51,6 +51,7 @@
                                   dash-functional
                                   anaconda-mode
                                   company-anaconda
+                                  origami
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
