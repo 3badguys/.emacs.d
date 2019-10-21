@@ -40,7 +40,6 @@
                                   go-mode
                                   go-autocomplete
                                   emms
-                                  smooth-scrolling
                                   tabbar
                                   undo-tree
                                   haskell-mode
