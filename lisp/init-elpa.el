@@ -33,6 +33,7 @@
                                   ace-jump-mode
                                   multiple-cursors
                                   symbol-overlay
+                                  highlight-indent-guides
                                   cnfonts
                                   session
                                   htmlize

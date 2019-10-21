@@ -4,8 +4,6 @@
 (if (version<= "26.0.50" emacs-version)
     (global-display-line-numbers-mode)
   (global-linum-mode t))
-(when (display-graphic-p)
-  (global-hl-line-mode t))
 
 (setq-default
  indent-tabs-mode nil
@@ -91,15 +89,6 @@
 (global-undo-tree-mode)
 (global-set-key (kbd "C-.") 'undo-tree-redo)
 (global-set-key (kbd "C-,") 'undo-tree-undo)
-
-;; symbol-overlay mode for highlighting the symbol
-(require 'symbol-overlay)
-(after-load 'symbol-overlay
-  (global-set-key (kbd "<f7>") 'symbol-overlay-mode)
-  (global-set-key (kbd "<f8>") 'symbol-overlay-put)
-  (global-set-key (kbd "<f9>") 'symbol-overlay-remove-all)
-  (global-set-key (kbd "M-n") 'symbol-overlay-switch-forward)
-  (global-set-key (kbd "M-p") 'symbol-overlay-switch-backward))
 
 ;; Copy from: https://www.emacswiki.org/emacs/SmoothScrolling
 ;; scroll one line at a time (less "jumpy" than defaults)
