@@ -4,7 +4,8 @@
 (if (version<= "26.0.50" emacs-version)
     (global-display-line-numbers-mode)
   (global-linum-mode t))
-;; (global-hl-line-mode t)
+(when (display-graphic-p)
+  (global-hl-line-mode t))
 
 (setq-default
  indent-tabs-mode nil
