@@ -66,6 +66,7 @@
   (require 'init-popwin)
   (require 'init-org)
   (require 'init-tags)
+  (require 'init-prog)
   (require 'init-lisp)
   (require 'init-c)
   (require 'init-go)
