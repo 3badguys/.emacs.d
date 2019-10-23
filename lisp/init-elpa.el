@@ -54,6 +54,7 @@
                                   company-anaconda
                                   origami
                                   beacon
+                                  goto-line-preview
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
