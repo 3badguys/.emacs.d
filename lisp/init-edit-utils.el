@@ -97,4 +97,8 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
+;; Don't disable case-change functions
+(put 'upcase-region 'disabled nil)   ;; C-x C-u
+(put 'downcase-region 'disabled nil) ;; C-x C-l
+
 (provide 'init-edit-utils)
