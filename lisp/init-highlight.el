@@ -6,12 +6,14 @@
 
 ;; symbol-overlay mode for highlighting the symbol
 (require 'symbol-overlay)
+(dolist (hook '(prog-mode-hook html-mode-hook yaml-mode-hook conf-mode-hook))
+  (add-hook hook 'symbol-overlay-mode))
 (after-load 'symbol-overlay
   (global-set-key (kbd "<f7>") 'symbol-overlay-mode)
   (global-set-key (kbd "<f8>") 'symbol-overlay-put)
   (global-set-key (kbd "<f9>") 'symbol-overlay-remove-all)
-  (global-set-key (kbd "M-n") 'symbol-overlay-switch-forward)
-  (global-set-key (kbd "M-p") 'symbol-overlay-switch-backward))
+  (global-set-key (kbd "M-n") 'symbol-overlay-jump-next)
+  (global-set-key (kbd "M-p") 'symbol-overlay-jump-prev))
 
 ;; Highlight indentation, only use in graphic environment
 (when (display-graphic-p)
