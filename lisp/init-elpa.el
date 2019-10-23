@@ -20,6 +20,7 @@
                                   helm-ag
                                   helm-rg
                                   smartparens
+                                  rainbow-delimiters
                                   popwin
                                   expand-region
                                   iedit

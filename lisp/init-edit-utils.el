@@ -101,4 +101,8 @@
 (put 'upcase-region 'disabled nil)   ;; C-x C-u
 (put 'downcase-region 'disabled nil) ;; C-x C-l
 
+;; rainbow-delimiters-mode
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
 (provide 'init-edit-utils)
