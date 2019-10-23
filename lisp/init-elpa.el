@@ -53,6 +53,7 @@
                                   anaconda-mode
                                   company-anaconda
                                   origami
+                                  beacon
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)

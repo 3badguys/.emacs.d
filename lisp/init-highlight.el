@@ -22,4 +22,16 @@
         highlight-indent-guides-character ?\|
         highlight-indent-guides-responsive 'top))
 
+;; rainbow-delimiters-mode
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+;; beacon-mode
+(require 'beacon)
+(setq-default beacon-blink-delay '0.2)
+(setq-default beacon-blink-when-focused 't)
+(setq-default beacon-dont-blink-commands 'nil)
+(setq-default beacon-push-mark '1)
+(add-hook 'after-init-hook 'beacon-mode)
+
 (provide 'init-highlight)
