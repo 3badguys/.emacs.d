@@ -9,8 +9,10 @@
  indent-tabs-mode nil
  tab-width 4
  make-backup-files nil
- auto-save-default nil
- delete-selection-mode t)
+ auto-save-default nil)
+
+;; delete-selection-mode
+(add-hook 'after-init-hook 'delete-selection-mode)
 
 ;; auto revert
 (global-auto-revert-mode)
