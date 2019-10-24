@@ -101,4 +101,9 @@
 (put 'upcase-region 'disabled nil)   ;; C-x C-u
 (put 'downcase-region 'disabled nil) ;; C-x C-l
 
+;; Don't disable narrowing commands
+(put 'narrow-to-region 'disabled nil) ;; C-x n n
+(put 'narrow-to-page 'disabled nil)   ;; C-x n d
+(put 'narrow-to-defun 'disabled nil)  ;; C-x n p
+
 (provide 'init-edit-utils)
