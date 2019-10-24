@@ -1,5 +1,9 @@
 ;;; init-edit-utils.el --- Day-to-day editing helpers
 
+;; set default file encoding
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
+
 ;; some base preferences
 (if (version<= "26.0.50" emacs-version)
     (global-display-line-numbers-mode)
