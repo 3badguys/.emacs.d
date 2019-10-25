@@ -10,8 +10,11 @@
 (when (not indicate-empty-lines)
   (toggle-indicate-empty-lines))
 
-;; full screen after init emacs
-(setq initial-frame-alist (quote ((fullscreen . maximized))))
+;; set initial-frame-alist
+(if (display-graphic-p)
+    (setq initial-frame-alist
+          '((fullscreen . maximized)
+            (background-color . "honeydew"))))
 
 ;; no tool bar
 (when (fboundp 'tool-bar-mode)
