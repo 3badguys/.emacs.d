@@ -9,6 +9,9 @@
     (global-display-line-numbers-mode)
   (global-linum-mode t))
 
+;; show cursor position within line
+(column-number-mode 1)
+
 (setq-default
  indent-tabs-mode nil
  tab-width 4
