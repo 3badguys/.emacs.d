@@ -26,8 +26,11 @@
 (when (fboundp 'menu-bar-mode)
   (menu-bar-mode -1))
 
-;; set cursor type, bar or box
+;; cursor
 (setq-default cursor-type 'box)
+(add-hook 'window-setup-hook
+          '(lambda ()
+             (set-cursor-color "red")))
 
 ;; Time management
 (setq display-time-24hr-format t) ; the date in modeline is English too, magic
