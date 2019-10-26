@@ -106,13 +106,21 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
-;; Don't disable case-change functions
-(put 'upcase-region 'disabled nil)   ;; C-x C-u
-(put 'downcase-region 'disabled nil) ;; C-x C-l
+(progn
+  ;; Don't disable case-change functions
+  (put 'upcase-region 'disabled nil)   ;; C-x C-u
+  (put 'downcase-region 'disabled nil) ;; C-x C-l
 
-;; Don't disable narrowing commands
-(put 'narrow-to-region 'disabled nil) ;; C-x n n
-(put 'narrow-to-page 'disabled nil)   ;; C-x n d
-(put 'narrow-to-defun 'disabled nil)  ;; C-x n p
+  ;; Don't disable narrowing commands
+  (put 'narrow-to-region 'disabled nil) ;; C-x n n
+  (put 'narrow-to-page 'disabled nil)   ;; C-x n d
+  (put 'narrow-to-defun 'disabled nil)  ;; C-x n p
+
+  ;; Erase buffer
+  (put 'erase-buffer 'disabled nil)
+
+  ;; Scroll to the left
+  (put 'scroll-left 'disabled nil) ;; C-x <
+  )
 
 (provide 'init-edit-utils)
