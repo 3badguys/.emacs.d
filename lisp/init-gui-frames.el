@@ -53,4 +53,11 @@
           ))
   )
 
+;; Use diminish to remove the minor-mode in mode line
+(require 'diminish)
+(add-hook 'after-init-hook
+          (lambda ()
+            (dolist (mm minor-mode-alist)
+              (diminish (car mm)))))
+
 (provide 'init-gui-frames)

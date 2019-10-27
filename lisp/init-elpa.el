@@ -57,6 +57,7 @@
                                   beacon
                                   goto-line-preview
                                   info-colors
+                                  diminish
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
