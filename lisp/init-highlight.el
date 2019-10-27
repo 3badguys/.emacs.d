@@ -22,6 +22,13 @@
         highlight-indent-guides-character ?\|
         highlight-indent-guides-responsive 'top)
 
+  ;; Don't display first level of indentation
+  (defun my-indent-guides-for-all-but-first-column (level responsive display)
+    (unless (< level 1)
+      (highlight-indent-guides--highlighter-default level responsive display)))
+  (setq highlight-indent-guides-highlighter-function
+        #'my-indent-guides-for-all-but-first-column)
+
   ;; Disable `highlight-indent-guides-mode' in `swiper'
   ;; https://github.com/DarthFennec/highlight-indent-guides/issues/40
   (after-load 'ivy
