@@ -21,6 +21,7 @@
                                   helm-rg
                                   smartparens
                                   rainbow-delimiters
+                                  highlight-numbers
                                   popwin
                                   expand-region
                                   iedit

@@ -34,6 +34,9 @@
             (remove-text-properties next pos '(display nil face nil) str))))))
   )
 
+;; highlight-numbers
+(add-hook 'prog-mode-hook 'highlight-numbers-mode)
+
 ;; rainbow-delimiters-mode
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
