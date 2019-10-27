@@ -34,4 +34,9 @@
 (setq-default beacon-push-mark '1)
 (add-hook 'after-init-hook 'beacon-mode)
 
+;; info-colors
+(require 'info-colors)
+(after-load 'info
+  (add-hook 'Info-selection-hook 'info-colors-fontify-node))
+
 (provide 'init-highlight)

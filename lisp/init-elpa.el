@@ -55,6 +55,7 @@
                                   origami
                                   beacon
                                   goto-line-preview
+                                  info-colors
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
