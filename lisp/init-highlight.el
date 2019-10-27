@@ -20,7 +20,19 @@
   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   (setq highlight-indent-guides-method 'character
         highlight-indent-guides-character ?\|
-        highlight-indent-guides-responsive 'top))
+        highlight-indent-guides-responsive 'top)
+
+  ;; Disable `highlight-indent-guides-mode' in `swiper'
+  ;; https://github.com/DarthFennec/highlight-indent-guides/issues/40
+  (after-load 'ivy
+    (defadvice ivy-cleanup-string (after my-ivy-cleanup-hig activate)
+      (let ((pos 0) (next 0) (limit (length str)) (prop 'highlight-indent-guides-prop))
+        (while (and pos next)
+          (setq next (text-property-not-all pos limit prop nil str))
+          (when next
+            (setq pos (text-property-any next limit prop nil str))
+            (remove-text-properties next pos '(display nil face nil) str))))))
+  )
 
 ;; rainbow-delimiters-mode
 (require 'rainbow-delimiters)
