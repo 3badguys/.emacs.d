@@ -5,7 +5,7 @@
 (setq large-file-warning-threshold nil)
 
 ;; Create TAGS file through ctags async.
-(defun my/create-tags-async (dir-name)
+(defun my-create-tags-async (dir-name)
   "Create tags file async."
   (interactive "DTAG-Root: ")
   (start-process-shell-command
@@ -18,7 +18,7 @@
 
 ;; Create TAGS file through ctags sync.
 ;; In order to debug when creating tags file failed.
-(defun my/create-tags-sync (dir-name)
+(defun my-create-tags-sync (dir-name)
   "Create tags file sync."
   (interactive "DTAG-Root: ")
   (shell-command
@@ -28,8 +28,8 @@
   (message "created tags sync through shell-command."))
 
 ;; Define keybindings for create-tags-funcs.
-(global-set-key (kbd "C-c c a") 'my/create-tags-async)
-(global-set-key (kbd "C-c c s") 'my/create-tags-sync)
+(global-set-key (kbd "C-c c a") 'my-create-tags-async)
+(global-set-key (kbd "C-c c s") 'my-create-tags-sync)
 
 ;; How to use ctags in Emacs effectively
 ;; Copy from http://blog.binchen.org/posts/how-to-use-ctags-in-emacs-effectively-3.html
@@ -91,5 +91,19 @@
 (add-hook 'python-mode-hook 'my-setup-develop-environment)
 (add-hook 'cperl-mode-hook 'my-setup-develop-environment)
 (add-hook 'haskell-mode-hook 'my-setup-develop-environment)
+
+(defun my-load-ctags-conf (CONF_FILE)
+  (interactive)
+  "Load .ctags to CONF_FILE."
+  (when (not (file-exists-p CONF_FILE))
+    (shell-command (format "mkdir -p %s; ln -s %s %s"
+                           (file-name-directory CONF_FILE)
+                           (expand-file-name (file-name-nondirectory CONF_FILE) user-emacs-directory)
+                           CONF_FILE))
+    (message "load .ctags success.")))
+
+(add-hook 'after-init-hook
+          (lambda ()
+            (my-load-ctags-conf "~/.ctags.d/.ctags")))
 
 (provide 'init-tags)

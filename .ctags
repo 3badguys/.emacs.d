@@ -1,0 +1,9 @@
+# File: ~/.ctags.d/.ctags
+
+--exclude=*.svn*
+--exclude=*.git*
+--exclude=*tmp*
+--exclude=.#*
+
+--tag-relative=yes
+--recurse=yes
