@@ -57,6 +57,7 @@
                                   goto-line-preview
                                   info-colors
                                   diminish
+                                  figlet
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
