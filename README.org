@@ -25,30 +25,15 @@ Emacs 架构：
 #+END_SRC
 
 * 使用的插件
- + exec-path-from-shell
- + company
- + hungry-delete
- + swiper
- + counsel
- + smartparens
- + popwin
- + expand-region
- + iedit
- + geiser
- + paredit
- + windresize
- + window-numbering
- + which-key
- + helm-ag
- + ggtags
- + ace-jump-mode
- + symbol-overlay
- + cnfonts
- + session
- + htmlize
- + auto-complete
- + go-mode
- + go-autocomplete
+#+BEGIN_SRC elisp :results output list
+  (defun print-elements-of-list (list)
+    "Print each element of LIST on a line of its own."
+    (while list
+      (print (car list))
+      (setq list (cdr list))))
+
+  (print-elements-of-list chuic456_emacs/packages)
+#+END_SRC
 
 * 参考资料
 + [[file:reference/GNU%20Emacs%20Reference%20Card.pdf][GNU Emacs Reference Card]]
