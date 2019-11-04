@@ -55,7 +55,7 @@
 
 ;; Use diminish to remove the minor-mode in mode line
 (require 'diminish)
-(add-hook 'after-init-hook
+(add-hook 'window-setup-hook
           (lambda ()
             (dolist (mm minor-mode-alist)
               (diminish (car mm)))))
