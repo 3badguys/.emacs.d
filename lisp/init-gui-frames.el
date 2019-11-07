@@ -53,6 +53,9 @@
           ))
   )
 
+;; display file size in mode line
+(size-indication-mode t)
+
 ;; Use diminish to remove the minor-mode in mode line
 (require 'diminish)
 (add-hook 'window-setup-hook
