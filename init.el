@@ -57,6 +57,7 @@
   (require 'init-sessions)
   (require 'init-shell)
   (require 'init-edit-utils)
+  (require 'init-info)
   (require 'init-highlight)
   (require 'init-spelling)
   (require 'init-folding)
