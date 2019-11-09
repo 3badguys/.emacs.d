@@ -53,7 +53,7 @@
                                   anaconda-mode
                                   company-anaconda
                                   origami
-                                  beacon
+                                  ;; beacon
                                   goto-line-preview
                                   info-colors
                                   diminish
