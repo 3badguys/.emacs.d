@@ -43,7 +43,7 @@
                                   go-autocomplete
                                   emms
                                   tabbar
-                                  undo-tree
+                                  ;; undo-tree
                                   haskell-mode
                                   ;; lsp-mode
                                   ;; lsp-ui
