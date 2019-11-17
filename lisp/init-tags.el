@@ -5,7 +5,7 @@
 (setq large-file-warning-threshold nil)
 
 ;; Create TAGS file through ctags async.
-(defun my-create-tags-async (dir-name)
+(defun 3badguys-create-tags-async (dir-name)
   "Create tags file async."
   (interactive "DTAG-Root: ")
   (start-process-shell-command
@@ -18,7 +18,7 @@
 
 ;; Create TAGS file through ctags sync.
 ;; In order to debug when creating tags file failed.
-(defun my-create-tags-sync (dir-name)
+(defun 3badguys-create-tags-sync (dir-name)
   "Create tags file sync."
   (interactive "DTAG-Root: ")
   (shell-command
@@ -28,18 +28,18 @@
   (message "created tags sync through shell-command."))
 
 ;; Define keybindings for create-tags-funcs.
-(global-set-key (kbd "C-c c a") 'my-create-tags-async)
-(global-set-key (kbd "C-c c s") 'my-create-tags-sync)
+(global-set-key (kbd "C-c c a") '3badguys-create-tags-async)
+(global-set-key (kbd "C-c c s") '3badguys-create-tags-sync)
 
 ;; How to use ctags in Emacs effectively
 ;; Copy from http://blog.binchen.org/posts/how-to-use-ctags-in-emacs-effectively-3.html
-(defun my-project-name-contains-substring (REGEX)
+(defun 3badguys-project-name-contains-substring (REGEX)
   (let ((dir (if (buffer-file-name)
                  (file-name-directory (buffer-file-name))
                "")))
     (string-match-p REGEX dir)))
 
-(defun my-create-tags-if-needed (SRC-DIR &optional FORCE)
+(defun 3badguys-create-tags-if-needed (SRC-DIR &optional FORCE)
   "return the full path of tags file"
   (let ((dir (file-name-as-directory (file-truename SRC-DIR)) )
         file)
@@ -52,47 +52,47 @@
     file
     ))
 
-(defvar my-tags-updated-time nil)
+(defvar 3badguys-tags-updated-time nil)
 
-(defun my-update-tags ()
+(defun 3badguys-update-tags ()
   (interactive)
   "check the tags in tags-table-list and re-create it"
   (dolist (tag tags-table-list)
-    (my-create-tags-if-needed (file-name-directory tag) t)
+    (3badguys-create-tags-if-needed (file-name-directory tag) t)
     ))
 
-(defun my-auto-update-tags-when-save ()
+(defun 3badguys-auto-update-tags-when-save ()
   (interactive)
   (cond
-   ((not my-tags-updated-time)
-    (setq my-tags-updated-time (current-time)))
-   ((< (- (float-time (current-time)) (float-time my-tags-updated-time)) 180)
+   ((not 3badguys-tags-updated-time)
+    (setq 3badguys-tags-updated-time (current-time)))
+   ((< (- (float-time (current-time)) (float-time 3badguys-tags-updated-time)) 180)
     ;; < 180 seconds
     (message "no need to updated the tags")
     )
    (t
-    (setq my-tags-updated-time (current-time))
-    (my-update-tags)
-    (message "updated tags after %d seconds." (- (float-time (current-time))  (float-time my-tags-updated-time)))
+    (setq 3badguys-tags-updated-time (current-time))
+    (3badguys-update-tags)
+    (message "updated tags after %d seconds." (- (float-time (current-time))  (float-time 3badguys-tags-updated-time)))
     )
    ))
 
-(defun my-setup-develop-environment ()
-  (when (my-project-name-contains-substring "/home/chuic456")
+(defun 3badguys-setup-develop-environment ()
+  (when (3badguys-project-name-contains-substring "/home/chuic456")
     (cond
-     ((my-project-name-contains-substring "code_proj")
+     ((3badguys-project-name-contains-substring "code_proj")
       (setq tags-table-list (list
-                             (my-create-tags-if-needed "~/code_proj/TrainingGround")
-                             (my-create-tags-if-needed "~/code_proj/remote_toy")))))))
+                             (3badguys-create-tags-if-needed "~/code_proj/TrainingGround")
+                             (3badguys-create-tags-if-needed "~/code_proj/remote_toy")))))))
 
-(add-hook 'after-save-hook 'my-auto-update-tags-when-save)
-(add-hook 'c-mode-hook 'my-setup-develop-environment)
-(add-hook 'c++-mode-hook 'my-setup-develop-environment)
-(add-hook 'python-mode-hook 'my-setup-develop-environment)
-(add-hook 'cperl-mode-hook 'my-setup-develop-environment)
-(add-hook 'haskell-mode-hook 'my-setup-develop-environment)
+(add-hook 'after-save-hook '3badguys-auto-update-tags-when-save)
+(add-hook 'c-mode-hook '3badguys-setup-develop-environment)
+(add-hook 'c++-mode-hook '3badguys-setup-develop-environment)
+(add-hook 'python-mode-hook '3badguys-setup-develop-environment)
+(add-hook 'cperl-mode-hook '3badguys-setup-develop-environment)
+(add-hook 'haskell-mode-hook '3badguys-setup-develop-environment)
 
-(defun my-load-ctags-conf (CONF_FILE)
+(defun 3badguys-load-ctags-conf (CONF_FILE)
   (interactive)
   "Load .ctags to CONF_FILE."
   (when (not (file-exists-p CONF_FILE))
@@ -104,6 +104,6 @@
 
 (add-hook 'after-init-hook
           (lambda ()
-            (my-load-ctags-conf "~/.ctags.d/.ctags")))
+            (3badguys-load-ctags-conf "~/.ctags.d/.ctags")))
 
 (provide 'init-tags)

@@ -125,7 +125,7 @@
 
 ;; Move to beginning of line
 ;; Copied from http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginning-of-a-line/
-(defun my/smarter-move-beginning-of-line (arg)
+(defun 3badguys-smarter-move-beginning-of-line (arg)
   "Move point back to indentation of beginning of line.
 
 Move point to the first non-whitespace character on this line.
@@ -150,6 +150,6 @@ point reaches the beginning or end of the buffer, stop there."
 
 ;; remap C-a to `smarter-move-beginning-of-line'
 (global-set-key [remap move-beginning-of-line]
-                'my/smarter-move-beginning-of-line)
+                '3badguys-smarter-move-beginning-of-line)
 
 (provide 'init-edit-utils)
