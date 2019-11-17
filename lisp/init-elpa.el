@@ -58,6 +58,7 @@
                                   info-colors
                                   diminish
                                   figlet
+                                  yaml-mode
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)
