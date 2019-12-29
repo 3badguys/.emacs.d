@@ -1,0 +1,46 @@
+From e8e4ba1fd2b93eed3088791d7cd30048693612e1 Mon Sep 17 00:00:00 2001
+From: Paul Eggert <eggert@cs.ucla.edu>
+Date: Wed, 8 May 2019 08:37:40 -0700
+Subject: [PATCH] Port LIBRSVG_CHECK_VERSION fix to picky cpp
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+* src/image.c (LIBRSVG_CHECK_VERSION): Define to yield false
+if it isn’t already defined.
+(svg_load_image): Port to C preprocessors that check the
+syntax of the entire preprocessing expression before
+evaluating any of it.
+---
+ src/image.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/src/image.c b/src/image.c
+index 725eb4b8d0..e8cb434177 100644
+--- a/src/image.c
++++ b/src/image.c
+@@ -9248,6 +9248,11 @@ svg_image_p (Lisp_Object object)
+ 
+ # include <librsvg/rsvg.h>
+ 
++/* librsvg is too old for us if it doesn't define this macro.  */
++# ifndef LIBRSVG_CHECK_VERSION
++#  define LIBRSVG_CHECK_VERSION(v, w, x) false
++# endif
++
+ # ifdef WINDOWSNT
+ 
+ /* Restore the original definition of __MINGW_MAJOR_VERSION.  */
+@@ -9465,8 +9470,7 @@ svg_load_image (struct frame *f, struct image *img, char *contents,
+   #if GNUC_PREREQ (4, 6, 0)
+    #pragma GCC diagnostic push
+   #endif
+-  #if defined LIBRSVG_CHECK_VERSION && LIBRSVG_CHECK_VERSION (2, 45, 1) \
+-    && GNUC_PREREQ (4, 2, 0)
++  #if LIBRSVG_CHECK_VERSION (2, 45, 1) && GNUC_PREREQ (4, 2, 0)
+    #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+   #endif
+ 
+-- 
+2.21.0
+
