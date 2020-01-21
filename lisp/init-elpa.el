@@ -59,6 +59,7 @@
                                   diminish
                                   figlet
                                   yaml-mode
+                                  command-log-mode
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)

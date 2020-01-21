@@ -38,4 +38,9 @@
 (require 'goto-line-preview)
 (global-set-key [remap goto-line] 'goto-line-preview)
 
+;; command-log-mode
+(require 'command-log-mode)
+(global-command-log-mode)
+(global-set-key (kbd "C-c h l") 'clm/open-command-log-buffer)
+
 (provide 'init-search)
