@@ -4,7 +4,11 @@
 (add-hook 'after-init-hook 'session-initialize)
 
 (require 'desktop)
+(setq desktop-path (list user-emacs-directory)
+      desktop-auto-save-timeout 600)
 (desktop-save-mode t)
+;; The default desktop is loaded anyway if it is locked
+(setq desktop-load-locked-desktop t)
 
 ;; Copy from https://www.emacswiki.org/emacs/Desktop
 (setq desktop-buffers-not-to-save
