@@ -27,7 +27,8 @@
   (menu-bar-mode -1))
 
 ;; cursor
-(setq-default cursor-type 'box)
+;; Not set cursor-type to avoid the conflict with xah-fly-keys.
+;; (setq-default cursor-type 'box)
 (add-hook 'window-setup-hook
           '(lambda ()
              (set-cursor-color "red")))
