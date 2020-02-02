@@ -51,6 +51,7 @@
 
   ;; Load configs for specific features and modes
   (require 'init-site-lisp)
+  (require 'init-xah-fly-keys)
   (require 'init-gui-frames)
   (require 'init-tabbar)
   (require 'init-windows)
