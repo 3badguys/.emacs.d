@@ -17,8 +17,6 @@
                                   hungry-delete
                                   swiper
                                   counsel
-                                  helm-ag
-                                  helm-rg
                                   smartparens
                                   rainbow-delimiters
                                   highlight-numbers
@@ -43,7 +41,6 @@
                                   go-autocomplete
                                   emms
                                   tabbar
-                                  ;; undo-tree
                                   haskell-mode
                                   ;; lsp-mode
                                   ;; lsp-ui
