@@ -13,8 +13,17 @@
 ;; set initial-frame-alist
 (if (display-graphic-p)
     (setq initial-frame-alist
-          '((fullscreen . maximized)
-            (background-color . "honeydew"))))
+          '(
+            (background-color . "honeydew")
+            ;; If you want to set full screen, use: (fullscreen . maximized)
+            (width . 90)
+            (height . 35))))
+
+(setq deafult-frame-alist
+      '(
+        (background-color . "honeydew")
+        (width . 90)
+        (height . 35)))
 
 ;; no tool bar
 (when (fboundp 'tool-bar-mode)
