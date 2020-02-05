@@ -1,7 +1,11 @@
 ;;; init-sessions.el --- Save and restore editor sessions between restarts
 
-(require 'session)
-(add-hook 'after-init-hook 'session-initialize)
+;; remember cursor position
+(if (version< emacs-version "25.0")
+    (progn
+      (require 'saveplace)
+      (setq-default save-place t))
+  (save-place-mode 1))
 
 (require 'desktop)
 (setq desktop-path (list user-emacs-directory)
