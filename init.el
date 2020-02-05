@@ -85,6 +85,9 @@
   (require 'init-yaml)
   (require 'init-misc)
 
+  ;; Use alias to shorten commands
+  (require 'init-defalias)
+
   ;; Variables configured via the interactive 'customize' interface
   (load (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory)) t t)
 

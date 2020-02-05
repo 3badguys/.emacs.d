@@ -33,9 +33,6 @@
 ;; hungry-delete mode
 (global-hungry-delete-mode)
 
-;; change yes-or-no to y-or-n
-(fset 'yes-or-no-p 'y-or-n-p)
-
 ;; indent the text content
 (defun indent-buffer()
   (interactive)
