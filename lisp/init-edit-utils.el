@@ -16,7 +16,10 @@
  indent-tabs-mode nil
  tab-width 4
  make-backup-files nil
- auto-save-default nil)
+ backup-by-copying t
+ create-lockfiles nil
+ auto-save-default nil
+)
 
 ;; delete-selection-mode
 (add-hook 'after-init-hook 'delete-selection-mode)
