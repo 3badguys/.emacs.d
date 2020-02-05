@@ -19,7 +19,7 @@
             (width . 90)
             (height . 35))))
 
-(setq deafult-frame-alist
+(setq default-frame-alist
       '(
         (background-color . "honeydew")
         (width . 90)
