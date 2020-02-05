@@ -37,8 +37,8 @@
                                   session
                                   htmlize
                                   auto-complete
-                                  go-mode
-                                  go-autocomplete
+                                  ;; go-mode
+                                  ;; go-autocomplete
                                   emms
                                   tabbar
                                   haskell-mode
