@@ -1,5 +1,16 @@
 ;;; init-go.el --- Config for golang
 
+;; TODO: This is ugly!
+;; Add the golang exec path
+(setq gopaths '("/usr/local/go/bin"
+		        ;;		(expand-file-name "bin" (substitute-in-file-name "$HOME/gocode/"))
+		        "/home/chuic456/gocode/bin"
+		        ))
+(setenv "PATH" (concat (getenv "PATH")
+		               (mapconcat 'identity gopaths ":")
+		               ))
+(setq exec-path (append gopaths exec-path))
+
 ;; add go-mode to auto-mode-alist
 (add-auto-mode 'go-mode "\\.go\\'")
 

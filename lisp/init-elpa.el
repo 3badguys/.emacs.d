@@ -31,21 +31,13 @@
                                   symbol-overlay
                                   highlight-indent-guides
                                   cnfonts
-                                  ;; session
                                   htmlize
                                   auto-complete
-                                  ;; go-mode
-                                  ;; go-autocomplete
                                   haskell-mode
-                                  ;; lsp-mode
-                                  ;; lsp-ui
-                                  ;; company-lsp
-                                  ;; eglot
                                   dash-functional
                                   anaconda-mode
                                   company-anaconda
                                   origami
-                                  ;; beacon
                                   goto-line-preview
                                   info-colors
                                   diminish
