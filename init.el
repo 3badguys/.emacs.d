@@ -53,7 +53,6 @@
   (require 'init-site-lisp)
   (require 'init-xah-fly-keys)
   (require 'init-gui-frames)
-  (require 'init-windows)
   (require 'init-sessions)
   (require 'init-edit-utils)
   (require 'init-info)

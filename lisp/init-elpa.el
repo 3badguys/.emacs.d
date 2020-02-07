@@ -25,8 +25,6 @@
                                   geiser
                                   slime
                                   paredit
-                                  windresize
-                                  window-numbering
                                   which-key
                                   ace-jump-mode
                                   multiple-cursors
