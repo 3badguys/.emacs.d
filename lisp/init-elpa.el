@@ -13,7 +13,6 @@
                                   exec-path-from-shell
                                   magit
                                   company
-                                  ;; company-tabnine
                                   hungry-delete
                                   swiper
                                   counsel
@@ -34,13 +33,11 @@
                                   symbol-overlay
                                   highlight-indent-guides
                                   cnfonts
-                                  session
+                                  ;; session
                                   htmlize
                                   auto-complete
                                   ;; go-mode
                                   ;; go-autocomplete
-                                  emms
-                                  tabbar
                                   haskell-mode
                                   ;; lsp-mode
                                   ;; lsp-ui

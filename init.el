@@ -81,7 +81,6 @@
   (require 'init-haskell)
   (require 'init-python)
   (require 'init-yaml)
-  (require 'init-misc)
 
   ;; Use alias to shorten commands
   (require 'init-defalias)
