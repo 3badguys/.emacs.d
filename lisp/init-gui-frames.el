@@ -10,30 +10,24 @@
 (when (not indicate-empty-lines)
   (toggle-indicate-empty-lines))
 
+;; Note: Use tool-bar-lines faster than setting `(tool-bar-mode -1)`
 ;; set initial-frame-alist
 (if (display-graphic-p)
     (setq initial-frame-alist
           '(
+            (tool-bar-lines . 0)
             (background-color . "honeydew")
             ;; If you want to set full screen, use: (fullscreen . maximized)
             (width . 90)
-            (height . 35))))
+            (height . 35)))
+  (setq initial-frame-alist '((tool-bar-lines . 0))))
 
 (setq default-frame-alist
       '(
+        (tool-bar-lines . 0)
         (background-color . "honeydew")
         (width . 90)
         (height . 35)))
-
-;; no tool bar
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
-;; no scroll bar
-(when (fboundp 'scroll-bar-mode)
-  (scroll-bar-mode -1))
-;; no menu bar
-(when (fboundp 'menu-bar-mode)
-  (menu-bar-mode -1))
 
 ;; cursor
 ;; Not set cursor-type to avoid the conflict with xah-fly-keys.
