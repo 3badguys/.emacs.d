@@ -90,12 +90,6 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-;; undo-tree mode
-(require 'undo-tree)
-(global-undo-tree-mode)
-(global-set-key (kbd "C-.") 'undo-tree-redo)
-(global-set-key (kbd "C-,") 'undo-tree-undo)
-
 ;; Copy from: https://www.emacswiki.org/emacs/SmoothScrolling
 ;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
