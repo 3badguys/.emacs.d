@@ -36,7 +36,6 @@
                                   dash-functional
                                   anaconda-mode
                                   company-anaconda
-                                  origami
                                   goto-line-preview
                                   info-colors
                                   diminish

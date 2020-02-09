@@ -58,7 +58,6 @@
   (require 'init-info)
   (require 'init-highlight)
   (require 'init-spelling)
-  (require 'init-folding)
   (require 'init-company)
   (require 'init-cnfonts)
   (require 'init-search) ;; Search file, content, command, etc.
