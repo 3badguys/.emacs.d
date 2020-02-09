@@ -27,9 +27,6 @@
 ;; auto revert
 (global-auto-revert-mode)
 
-;; hungry-delete mode
-(global-hungry-delete-mode)
-
 ;; indent the text content
 (defun indent-buffer()
   (interactive)

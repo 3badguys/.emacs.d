@@ -13,7 +13,6 @@
                                   exec-path-from-shell
                                   magit
                                   company
-                                  hungry-delete
                                   swiper
                                   counsel
                                   smartparens
