@@ -19,27 +19,21 @@
                                   rainbow-delimiters
                                   highlight-numbers
                                   popwin
-                                  expand-region
                                   iedit
                                   geiser
                                   slime
                                   paredit
                                   which-key
-                                  ace-jump-mode
-                                  multiple-cursors
                                   symbol-overlay
                                   highlight-indent-guides
                                   cnfonts
-                                  htmlize
                                   auto-complete
                                   haskell-mode
-                                  dash-functional
                                   anaconda-mode
                                   company-anaconda
                                   goto-line-preview
                                   info-colors
                                   diminish
-                                  figlet
                                   yaml-mode
                                   command-log-mode
                                   ) "Default packages")

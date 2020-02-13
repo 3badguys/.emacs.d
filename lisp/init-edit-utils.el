@@ -45,9 +45,6 @@
 
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
-;; expand-region
-(global-set-key (kbd "C-=") 'er/expand-region)
-
 ;; handle eol
 (defun hidden-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
@@ -79,13 +76,6 @@
     (comment-or-uncomment-region start end)))
 
 (global-set-key (kbd "C-c C-c") 'comment-eclipse)
-
-;; multiple-cursors mode
-(require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; Copy from: https://www.emacswiki.org/emacs/SmoothScrolling
 ;; scroll one line at a time (less "jumpy" than defaults)

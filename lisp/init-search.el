@@ -42,16 +42,6 @@ Version 2019-02-22"
 (global-set-key (kbd "C-c p s") 'counsel-rg)
 (global-set-key (kbd "M-s i") 'counsel-semantic-or-imenu)
 
-;; ace-jump
-(autoload
-  'ace-jump-mode
-  "ace-jump-mode" t)
-(after-load 'ace-jump-mode
-  '(ace-jump-mode-enable-mark-sync))
-
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-(define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
-
 ;; goto-line-preview
 (require 'goto-line-preview)
 (global-set-key [remap goto-line] 'goto-line-preview)
