@@ -13,8 +13,7 @@
                                   exec-path-from-shell
                                   magit
                                   company
-                                  swiper
-                                  counsel
+                                  smex
                                   smartparens
                                   rainbow-delimiters
                                   highlight-numbers

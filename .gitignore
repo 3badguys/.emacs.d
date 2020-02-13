@@ -2,6 +2,7 @@ recentf
 abbrev_defs
 auto-save-list/
 eshell/
+smex-items
 .session
 .emacs.desktop
 .emacs.desktop.lock

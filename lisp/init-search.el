@@ -1,10 +1,13 @@
 ;;; init-search.el --- Config for search tools
 
-;; ivy
-(add-hook 'after-init-hook 'ivy-mode)
-(after-load 'ivy
-  (setq-default ivy-use-virtual-buffers t
-                enable-recursive-minibuffers t))
+;; smex, a M-x enhancement for Emacs
+(when (fboundp 'smex)
+  (require 'smex)
+  (smex-initialize)
+  (global-set-key (kbd "M-x") 'smex)
+  (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+  ;; This is your old M-x.
+  (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command))
 
 ;; for isearch-forward, make these equivalent: space newline tab hyphen underscore
 (setq search-whitespace-regexp "[-_ \t\n]+")
@@ -23,24 +26,6 @@ Version 2019-02-22"
     (progn
       (setq search-whitespace-regexp nil)
       (message "Space set to literal."))))
-
-;; swiper
-(global-set-key "\C-s" 'swiper)
-
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-(setq ivy-initial-inputs-alist nil)
-
-;; counsel
-(add-hook 'after-init-hook 'counsel-mode)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key "\C-x\ \C-r" 'counsel-recentf)
-(global-set-key (kbd "C-x C-b") 'counsel-ibuffer)
-(global-set-key (kbd "C-h f") 'counsel-describe-function)
-(global-set-key (kbd "C-h v") 'counsel-describe-variable)
-(global-set-key (kbd "C-c p f") 'counsel-git)
-(global-set-key (kbd "C-c p s") 'counsel-rg)
-(global-set-key (kbd "M-s i") 'counsel-semantic-or-imenu)
 
 ;; goto-line-preview
 (require 'goto-line-preview)
