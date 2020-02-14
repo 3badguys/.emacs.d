@@ -23,7 +23,6 @@
                                   highlight-indent-guides
                                   goto-line-preview
                                   company
-                                  auto-complete
                                   info-colors
                                   haskell-mode
                                   anaconda-mode
