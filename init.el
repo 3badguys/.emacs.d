@@ -75,7 +75,7 @@
   (require 'init-defalias)
 
   ;; Variables configured via the interactive 'customize' interface
-  (load (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory)) t t)
+  (load (setq custom-file (expand-file-name "custom.el" user-emacs-directory)) t t)
 
   ;; Allow users to provide an option "init-local" containing presonal settings
   (require 'init-local nil t))
