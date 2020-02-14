@@ -19,7 +19,19 @@
  backup-by-copying t
  create-lockfiles nil
  auto-save-default nil
-)
+ )
+
+;; spell checking
+(require 'ispell)
+;; Spell check through aspell
+(when (executable-find "aspell")
+  (setq-default ispell-program-name "aspell")
+  ;; Add spell-checking in comments for all programming language modes
+  (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+  (after-load 'flyspell
+    (define-key flyspell-mode-map (kbd "C-;") nil)
+    (define-key flyspell-mode-map (kbd "C-,") nil)
+    (define-key flyspell-mode-map (kbd "C-.") nil)))
 
 ;; delete-selection-mode
 (add-hook 'after-init-hook 'delete-selection-mode)

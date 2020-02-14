@@ -9,6 +9,14 @@
   ;; This is your old M-x.
   (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command))
 
+;; which-key
+(require 'which-key)
+(which-key-mode 1)
+
+;; recentf, open recently opened file
+(add-hook 'after-init-hook 'recentf-mode)
+(setq recentf-max-menu-items 25)
+
 ;; everytime bookmark is changed, automatically save it
 (setq bookmark-save-flag 1)
 
