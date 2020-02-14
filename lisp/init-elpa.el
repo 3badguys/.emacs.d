@@ -11,25 +11,24 @@
 ;; Add Packages
 (defvar chuic456_emacs/packages '(
                                   exec-path-from-shell
-                                  magit
-                                  company
                                   smex
+                                  magit
+                                  diminish
+                                  which-key
+                                  command-log-mode
+                                  cnfonts
                                   rainbow-delimiters
                                   highlight-numbers
-                                  iedit
-                                  which-key
                                   symbol-overlay
                                   highlight-indent-guides
-                                  cnfonts
+                                  goto-line-preview
+                                  company
                                   auto-complete
+                                  info-colors
                                   haskell-mode
                                   anaconda-mode
                                   company-anaconda
-                                  goto-line-preview
-                                  info-colors
-                                  diminish
                                   yaml-mode
-                                  command-log-mode
                                   ) "Default packages")
 
 (setq package-selected-packages chuic456_emacs/packages)

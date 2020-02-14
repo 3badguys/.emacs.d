@@ -61,7 +61,6 @@
   (require 'init-recentf)
   (require 'init-dired)
   (require 'init-which-key)
-  (require 'init-iedit)
   (require 'init-org)
   (require 'init-tags)
   (require 'init-prog)
