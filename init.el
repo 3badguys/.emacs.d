@@ -65,7 +65,6 @@
   (require 'init-hippie-expand)
   (require 'init-recentf)
   (require 'init-dired)
-  (require 'init-paredit)
   (require 'init-which-key)
   (require 'init-iedit)
   (require 'init-popwin)
