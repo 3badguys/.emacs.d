@@ -9,7 +9,7 @@
 			               ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
 
 ;; Add Packages
-(defvar chuic456_emacs/packages '(
+(defvar 3badguys-emacs/packages '(
                                   exec-path-from-shell
                                   smex
                                   magit
@@ -30,17 +30,17 @@
                                   yaml-mode
                                   ) "Default packages")
 
-(setq package-selected-packages chuic456_emacs/packages)
+(setq package-selected-packages 3badguys-emacs/packages)
 
-(defun chuic456_emacs/packages-installed-p ()
-  (loop for pkg in chuic456_emacs/packages
+(defun 3badguys-emacs/packages-installed-p ()
+  (loop for pkg in 3badguys-emacs/packages
 	    when (not (package-installed-p pkg)) do (return nil)
 	    finally (return t)))
 
-(unless (chuic456_emacs/packages-installed-p)
+(unless (3badguys-emacs/packages-installed-p)
   (message "%s" "Refreshing package database...")
   (package-refresh-contents)
-  (dolist (pkg chuic456_emacs/packages)
+  (dolist (pkg 3badguys-emacs/packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 

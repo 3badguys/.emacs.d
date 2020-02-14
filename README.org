@@ -32,7 +32,7 @@ Emacs 架构：
       (print (car list))
       (setq list (cdr list))))
 
-  (print-elements-of-list chuic456_emacs/packages)
+  (print-elements-of-list 3badguys-emacs/packages)
 #+END_SRC
 
 * 参考资料
