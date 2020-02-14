@@ -16,7 +16,6 @@
                                   smex
                                   rainbow-delimiters
                                   highlight-numbers
-                                  popwin
                                   iedit
                                   which-key
                                   symbol-overlay
