@@ -9,6 +9,9 @@
   ;; This is your old M-x.
   (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command))
 
+;; everytime bookmark is changed, automatically save it
+(setq bookmark-save-flag 1)
+
 ;; for isearch-forward, make these equivalent: space newline tab hyphen underscore
 (setq search-whitespace-regexp "[-_ \t\n]+")
 

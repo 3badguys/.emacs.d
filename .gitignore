@@ -3,6 +3,7 @@ abbrev_defs
 auto-save-list/
 eshell/
 smex-items
+bookmarks
 .session
 .emacs.desktop
 .emacs.desktop.lock

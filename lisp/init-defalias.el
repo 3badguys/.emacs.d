@@ -5,7 +5,6 @@
 (defalias 'rs 'replace-string)
 
 ;; make frequently used commands short
-(defalias 'ie 'open-init-el)
 (defalias 'dc 'desktop-clear)
 
 (defalias 'lcd 'list-colors-display)
