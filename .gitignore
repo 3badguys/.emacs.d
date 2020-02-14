@@ -3,6 +3,7 @@ abbrev_defs
 auto-save-list/
 eshell/
 smex-items
+history
 bookmarks
 .session
 .emacs.desktop
