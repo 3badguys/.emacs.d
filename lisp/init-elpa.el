@@ -14,14 +14,10 @@
                                   magit
                                   company
                                   smex
-                                  smartparens
                                   rainbow-delimiters
                                   highlight-numbers
                                   popwin
                                   iedit
-                                  geiser
-                                  slime
-                                  paredit
                                   which-key
                                   symbol-overlay
                                   highlight-indent-guides
