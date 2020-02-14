@@ -4,6 +4,7 @@ auto-save-list/
 eshell/
 smex-items
 history
+ido.last
 bookmarks
 .session
 .emacs.desktop
