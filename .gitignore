@@ -1,7 +1,8 @@
 recentf
 abbrev_defs
 auto-save-list/
-eshell/
+eshell/*
+!eshell/alias
 smex-items
 history
 ido.last

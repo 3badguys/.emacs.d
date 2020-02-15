@@ -48,6 +48,7 @@
   (require 'init-xah-fly-keys)
   (require 'init-gui-frames)
   (require 'init-sessions)
+  (require 'init-eshell)
   (require 'init-edit-utils)
   (require 'init-highlight)
   (require 'init-cnfonts)
