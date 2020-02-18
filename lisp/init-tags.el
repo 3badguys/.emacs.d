@@ -78,12 +78,11 @@
    ))
 
 (defun 3badguys-setup-develop-environment ()
-  (when (3badguys-project-name-contains-substring "/home/chuic456")
+  (when (3badguys-project-name-contains-substring (substitute-in-file-name "$HOME"))
     (cond
      ((3badguys-project-name-contains-substring "code_proj")
       (setq tags-table-list (list
-                             (3badguys-create-tags-if-needed "~/code_proj/TrainingGround")
-                             (3badguys-create-tags-if-needed "~/code_proj/remote_toy")))))))
+                             (3badguys-create-tags-if-needed "~/code_proj/TrainingGround")))))))
 
 (add-hook 'after-save-hook '3badguys-auto-update-tags-when-save)
 (add-hook 'c-mode-hook '3badguys-setup-develop-environment)
