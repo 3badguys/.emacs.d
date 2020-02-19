@@ -25,8 +25,6 @@
 
 (setq emacs-load-start-time (current-time))
 
-(when (equal window-system 'w32)
-  (setq default-directory "E:/"))
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 ;; Normally file-name-handler-alist is set to

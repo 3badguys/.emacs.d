@@ -5,6 +5,7 @@ eshell/*
 !eshell/alias
 smex-items
 history
+server/server
 ido.last
 bookmarks
 .session
