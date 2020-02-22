@@ -28,6 +28,7 @@
                                   anaconda-mode
                                   company-anaconda
                                   yaml-mode
+                                  htmlize
                                   ) "Default packages")
 
 (setq package-selected-packages 3badguys-emacs/packages)
