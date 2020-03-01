@@ -16,7 +16,6 @@
                                   diminish
                                   which-key
                                   command-log-mode
-                                  cnfonts
                                   rainbow-delimiters
                                   highlight-numbers
                                   symbol-overlay

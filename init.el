@@ -49,7 +49,6 @@
   (require 'init-eshell)
   (require 'init-edit-utils)
   (require 'init-highlight)
-  (require 'init-cnfonts)
   (require 'init-search)
   (require 'init-abbrev)
   (require 'init-hippie-expand)
