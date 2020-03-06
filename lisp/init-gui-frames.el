@@ -27,6 +27,8 @@
               (background-color . "honeydew")
               (width . 90)
               (height . 35)))
+      (when (equal window-system 'x)
+        (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-9")))
       )
   (progn
     (setq initial-frame-alist '((tool-bar-lines . 0)))
