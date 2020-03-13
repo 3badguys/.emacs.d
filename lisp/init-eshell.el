@@ -32,4 +32,9 @@
       (find-file (pop args)))))
 (defalias 'eshell/vim 'eshell/vi)
 
+;; Basic configuration
+(setq eshell-cmpl-ignore-case t
+      eshell-save-history-on-exit t
+      eshell-hist-ignoredups t)
+
 (provide 'init-eshell)
