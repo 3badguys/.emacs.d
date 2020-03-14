@@ -37,4 +37,10 @@
       eshell-save-history-on-exit t
       eshell-hist-ignoredups t)
 
+;; Remove pcomplete-completions-at-point from completion-at-point-functions in eshell-mode-hook
+;; https://github.com/company-mode/company-mode/issues/409
+(defun 3badguys-eshell-remove-pcomplete ()
+  (remove-hook 'completion-at-point-functions #'pcomplete-completions-at-point t))
+(add-hook 'eshell-mode-hook #'3badguys-eshell-remove-pcomplete)
+
 (provide 'init-eshell)
