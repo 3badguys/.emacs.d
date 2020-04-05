@@ -19,14 +19,14 @@
               (tool-bar-lines . 0)
               (background-color . "honeydew")
               ;; If you want to set full screen, use: (fullscreen . maximized)
-              (width . 90)
-              (height . 35)))
+              (width . 100)
+              (height . 45)))
       (setq default-frame-alist
             '(
               (tool-bar-lines . 0)
               (background-color . "honeydew")
-              (width . 90)
-              (height . 35)))
+              (width . 100)
+              (height . 45)))
       (when (equal window-system 'x)
         (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-9")))
       )
