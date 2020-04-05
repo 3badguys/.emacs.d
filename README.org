@@ -1,8 +1,8 @@
 #+TITLE: Emacs介绍及配置
 
 * 介绍
-Emacs 于 1975 年诞生在 MIT 人工智能实验室，由自由软件之父理 Richard Stallman 开发。
-Emacs 架构：
+Emacs 于 1975 年诞生在 MIT 人工智能实验室，由 Richard Stallman 开发。
+** Emacs 架构：
 + 底层：用 C 语言完成与系统交互和展示部分，并实现了一个 Lisp 解析器
 + 上层：通过 Emacs Lisp 不断扩展自身，其实 Emacs 中绝大多数的操作都是在调用 Emacs Lisp
 
