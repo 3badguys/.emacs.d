@@ -41,6 +41,8 @@
 (add-hook 'window-setup-hook
           '(lambda ()
              (set-cursor-color "red")))
+;; disable cursor blink
+(blink-cursor-mode 0)
 
 ;; Time management
 (setq display-time-24hr-format t) ; the date in modeline is English too, magic
