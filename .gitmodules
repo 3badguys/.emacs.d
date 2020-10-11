@@ -1,3 +1,6 @@
 [submodule "site-lisp/xah-fly-keys"]
 	path = site-lisp/xah-fly-keys
 	url = https://github.com/xahlee/xah-fly-keys.git
+[submodule "site-lisp/xah-elisp-mode"]
+	path = site-lisp/xah-elisp-mode
+	url = https://github.com/xahlee/xah-elisp-mode.git
