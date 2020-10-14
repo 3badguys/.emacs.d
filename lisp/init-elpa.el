@@ -13,20 +13,12 @@
                                   exec-path-from-shell
                                   smex
                                   magit
-                                  diminish
                                   which-key
                                   command-log-mode
-                                  rainbow-delimiters
-                                  highlight-numbers
-                                  symbol-overlay
-                                  highlight-indent-guides
-                                  goto-line-preview
                                   company
-                                  info-colors
                                   haskell-mode
                                   anaconda-mode
                                   company-anaconda
-                                  yaml-mode
                                   htmlize
                                   ) "Default packages")
 

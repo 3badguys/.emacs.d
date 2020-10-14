@@ -35,19 +35,8 @@
     (setq default-frame-alist '((tool-bar-lines . 0)))
     ))
 
-;; cursor
-;; Not set cursor-type to avoid the conflict with xah-fly-keys.
-;; (setq-default cursor-type 'box)
-(add-hook 'window-setup-hook
-          '(lambda ()
-             (set-cursor-color "red")))
 ;; disable cursor blink
 (blink-cursor-mode 0)
-
-;; Time management
-(setq display-time-24hr-format t) ; the date in modeline is English too, magic
-(setq display-time-day-and-date t)
-(display-time-mode) ; show date in modeline
 
 ;; whitespace-mode
 (progn
@@ -64,15 +53,5 @@
           (tab-mark 9 [9655 9] [92 9]) ; tab
           ))
   )
-
-;; display file size in mode line
-(size-indication-mode t)
-
-;; Use diminish to remove the minor-mode in mode line
-(require 'diminish)
-(add-hook 'window-setup-hook
-          (lambda ()
-            (dolist (mm minor-mode-alist)
-              (diminish (car mm)))))
 
 (provide 'init-gui-frames)

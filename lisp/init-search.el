@@ -1,14 +1,5 @@
 ;;; init-search.el --- Config for search tools
 
-;; smex, a M-x enhancement for Emacs
-(when (fboundp 'smex)
-  (require 'smex)
-  (smex-initialize)
-  (global-set-key (kbd "M-x") 'smex)
-  (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-  ;; This is your old M-x.
-  (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command))
-
 (progn
   (setq enable-recursive-minibuffers t)
 
@@ -89,10 +80,6 @@ Version 2019-02-22"
     (progn
       (setq search-whitespace-regexp nil)
       (message "Space set to literal."))))
-
-;; goto-line-preview
-(require 'goto-line-preview)
-(global-set-key [remap goto-line] 'goto-line-preview)
 
 ;; command-log-mode
 (require 'command-log-mode)
