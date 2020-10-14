@@ -28,7 +28,7 @@
               (width . 100)
               (height . 45)))
       (when (equal window-system 'x)
-        (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-9")))
+        (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10")))
       )
   (progn
     (setq initial-frame-alist '((tool-bar-lines . 0)))
