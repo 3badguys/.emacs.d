@@ -5,11 +5,6 @@
 (setq use-dialog-box nil)
 (setq inhibit-splash-screen t)
 
-;; show a marker in the left fringe for lines not in the buffer
-(setq-default indicate-empty-lines t)
-(when (not indicate-empty-lines)
-  (toggle-indicate-empty-lines))
-
 ;; Note: Use tool-bar-lines faster than setting `(tool-bar-mode -1)`
 ;; set initial-frame-alist and default-frame-alist
 (if (display-graphic-p)
