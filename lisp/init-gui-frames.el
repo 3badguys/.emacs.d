@@ -30,6 +30,14 @@
     (setq default-frame-alist '((tool-bar-lines . 0)))
     ))
 
+;; some base preferences
+(if (version<= "26.0.50" emacs-version)
+    (global-display-line-numbers-mode)
+  (global-linum-mode t))
+
+;; show cursor position within line
+(column-number-mode 1)
+
 ;; disable cursor blink
 (blink-cursor-mode 0)
 

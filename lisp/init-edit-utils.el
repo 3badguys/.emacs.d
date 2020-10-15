@@ -4,14 +4,6 @@
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 
-;; some base preferences
-(if (version<= "26.0.50" emacs-version)
-    (global-display-line-numbers-mode)
-  (global-linum-mode t))
-
-;; show cursor position within line
-(column-number-mode 1)
-
 (setq-default
  indent-tabs-mode nil
  tab-width 4

@@ -27,6 +27,13 @@
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+;; Add site-lisp's subdirs to load-path
+(defun add-subdirs-to-load-path (dir)
+  "Recursive add directories to `load-path'."
+  (let ((default-directory (file-name-as-directory dir)))
+    (normal-top-level-add-subdirs-to-load-path)))
+(add-subdirs-to-load-path (expand-file-name "site-lisp" user-emacs-directory))
+
 ;; Normally file-name-handler-alist is set to
 ;; (("\\`/[^/]*\\'" . tramp-completion-file-name-handler)
 ;; ("\\`/[^/|:][^/|]*:" . tramp-file-name-handler)
@@ -42,7 +49,6 @@
   (require 'init-preload-local nil t)
 
   ;; Load configs for specific features and modes
-  (require 'init-site-lisp)
   (require 'init-xah-fly-keys)
   (require 'init-gui-frames)
   (require 'init-sessions)
