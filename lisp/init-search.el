@@ -81,9 +81,18 @@ Version 2019-02-22"
       (setq search-whitespace-regexp nil)
       (message "Space set to literal."))))
 
-;; command-log-mode
-(require 'command-log-mode)
-(global-command-log-mode)
-(global-set-key (kbd "C-c h l") 'clm/open-command-log-buffer)
+(defun tbg-start-command-log ()
+  "Start the `command-log-mode' globally and
+make current buffer the log buffer, then make a
+new frame. Change from `xah-start-command-log'.
+Version 2020-10-20"
+  (interactive)
+  (command-log-mode)
+  (global-command-log-mode)
+  (clm/open-command-log-buffer)
+  (delete-window)
+  (set-frame-width (selected-frame) 55)
+  (text-scale-set 0)
+  (make-frame))
 
 (provide 'init-search)
