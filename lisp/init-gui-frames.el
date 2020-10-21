@@ -15,13 +15,13 @@
               (background-color . "honeydew")
               ;; If you want to set full screen, use: (fullscreen . maximized)
               (width . 100)
-              (height . 45)))
+              (height . 60)))
       (setq default-frame-alist
             '(
               (tool-bar-lines . 0)
               (background-color . "honeydew")
               (width . 100)
-              (height . 45)))
+              (height . 60)))
       (when (equal window-system 'x)
         (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10")))
       )
@@ -29,6 +29,24 @@
     (setq initial-frame-alist '((tool-bar-lines . 0)))
     (setq default-frame-alist '((tool-bar-lines . 0)))
     ))
+
+(defun tbg-cycle-frame-size ()
+  "Cycle frame size among certain sizes.
+Version 2020-10-21"
+  (interactive)
+  (let (
+        ($widthHeightPairs [[75 45] [100 60]])
+        $pairIdx $width $height)
+
+    (when (not (get this-command 'pairIdx))
+      (put this-command 'pairIdx 0))
+    (setq $pairIdx (get this-command 'pairIdx))
+
+    (setq $width (elt (elt $widthHeightPairs $pairIdx) 0))
+    (setq $height (elt (elt $widthHeightPairs $pairIdx) 1))
+    (set-frame-size (selected-frame) $width $height)
+    (put this-command 'pairIdx
+         (mod (1+ $pairIdx) (length $widthHeightPairs)))))
 
 ;; some base preferences
 (if (version<= "26.0.50" emacs-version)
