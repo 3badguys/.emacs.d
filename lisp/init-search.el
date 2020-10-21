@@ -58,7 +58,7 @@
 
 ;; recentf, open recently opened file
 (add-hook 'after-init-hook 'recentf-mode)
-(setq recentf-max-menu-items 25)
+(setq recentf-max-menu-items 50)
 
 ;; everytime bookmark is changed, automatically save it
 (setq bookmark-save-flag 1)
