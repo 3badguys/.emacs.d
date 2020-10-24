@@ -83,16 +83,19 @@ Version 2019-02-22"
 
 (defun tbg-start-command-log ()
   "Start the `command-log-mode' globally and
-make current buffer the log buffer, then make a
-new frame. Change from `xah-start-command-log'.
-Version 2020-10-20"
+make a new buffer as log buffer. Change from
+ `xah-start-command-log'.
+Version 2020-10-24"
   (interactive)
+  (setq $current-fr (selected-frame))
+  (setq $new-fr (make-frame))
+  (select-frame-set-input-focus $new-fr)
+  (set-frame-width (selected-frame) 55)
   (command-log-mode)
   (global-command-log-mode)
   (clm/open-command-log-buffer)
   (delete-window)
-  (set-frame-width (selected-frame) 55)
   (text-scale-set 0)
-  (make-frame))
+  (select-frame-set-input-focus $current-fr))
 
 (provide 'init-search)
