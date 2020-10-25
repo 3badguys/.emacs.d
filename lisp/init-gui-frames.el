@@ -32,10 +32,10 @@
 
 (defun tbg-cycle-frame-size ()
   "Cycle frame size among certain sizes.
-Version 2020-10-21"
+Version 2020-10-26"
   (interactive)
   (let (
-        ($widthHeightPairs [[75 45] [100 60]])
+        ($widthHeightPairs [[75 45] [55 45] [100 60] [55 60]])
         $pairIdx $width $height)
 
     (when (not (get this-command 'pairIdx))
