@@ -34,6 +34,10 @@
     (normal-top-level-add-subdirs-to-load-path)))
 (add-subdirs-to-load-path (expand-file-name "site-lisp" user-emacs-directory))
 
+;; Personal information
+(setq user-full-name "3badguys")
+(setq user-mail-address "chuiC456@163.com")
+
 ;; Normally file-name-handler-alist is set to
 ;; (("\\`/[^/]*\\'" . tramp-completion-file-name-handler)
 ;; ("\\`/[^/|:][^/|]*:" . tramp-file-name-handler)
