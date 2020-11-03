@@ -27,6 +27,10 @@
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+;; Personal information
+(setq user-full-name "3badguys")
+(setq user-mail-address "chuiC456@163.com")
+
 ;; Add site-lisp's subdirs to load-path
 (defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path'."
@@ -34,9 +38,8 @@
     (normal-top-level-add-subdirs-to-load-path)))
 (add-subdirs-to-load-path (expand-file-name "site-lisp" user-emacs-directory))
 
-;; Personal information
-(setq user-full-name "3badguys")
-(setq user-mail-address "chuiC456@163.com")
+;; Load personal package
+(require 'tbg-header)
 
 ;; Normally file-name-handler-alist is set to
 ;; (("\\`/[^/]*\\'" . tramp-completion-file-name-handler)
