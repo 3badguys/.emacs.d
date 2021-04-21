@@ -5,30 +5,27 @@
 (setq use-dialog-box nil)
 (setq inhibit-splash-screen t)
 
-;; Note: Use tool-bar-lines faster than setting `(tool-bar-mode -1)`
-;; set initial-frame-alist and default-frame-alist
-(if (display-graphic-p)
-    (progn
-      (setq initial-frame-alist
+;; initial window and default window
+(setq default-frame-alist
+      (if (display-graphic-p)
+          (cond
+           ((string-equal (system-name) "chuic456-debian10")
             '(
               (tool-bar-lines . 0)
-              (background-color . "honeydew")
-              ;; If you want to set full screen, use: (fullscreen . maximized)
+              (background-color . "white")
               (width . 100)
               (height . 60)))
-      (setq default-frame-alist
-            '(
-              (tool-bar-lines . 0)
-              (background-color . "honeydew")
-              (width . 100)
-              (height . 60)))
-      (when (equal window-system 'x)
-        (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10")))
-      )
-  (progn
-    (setq initial-frame-alist '((tool-bar-lines . 0)))
-    (setq default-frame-alist '((tool-bar-lines . 0)))
-    ))
+           (t nil))
+        ;; Use tool-bar-lines faster than setting `(tool-bar-mode -1)`
+        '((tool-bar-lines . 0))))
+
+;; set default font
+(set-frame-font
+ (cond
+  ((string-equal system-type "gnu/linux")
+   (if (member "DejaVu Sans Mono" (font-family-list)) "DejaVu Sans Mono-8" nil))
+  (t nil))
+ t t)
 
 (defun tbg-cycle-frame-size ()
   "Cycle frame size among certain sizes.
