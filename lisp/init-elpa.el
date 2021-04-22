@@ -4,8 +4,18 @@
 
 (require 'cl)
 
-;; (add-to-list 'package-archives '("gnu" . "http://elpa.emacs-china.org/gnu/") t)
-;; (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/") t)
+(setq package-archives
+      '(
+        ;; uncomment below line if you need use GNU ELPA.
+        ("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")
+        ("melpa-stable" . "https://stable.melpa.org/packages/")
+
+        ;; Option: emacs-china repository
+        ;; ("gnu" . "http://elpa.emacs-china.org/gnu/")
+        ;; ("melpa" . "http://elpa.emacs-china.org/melpa/")
+        ;;
+))
 
 ;; Add Packages
 (defvar 3badguys-emacs/packages '(
