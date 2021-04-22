@@ -4,3 +4,15 @@
 [submodule "site-lisp/xah-elisp-mode"]
 	path = site-lisp/xah-elisp-mode
 	url = https://github.com/xahlee/xah-elisp-mode.git
+[submodule "site-lisp/tbg-cloc"]
+	path = site-lisp/tbg-cloc
+	url = https://github.com/3badguys/tbg-cloc.git
+[submodule "site-lisp/tbg-find-replace"]
+	path = site-lisp/tbg-find-replace
+	url = https://github.com/3badguys/tbg-find-replace.git
+[submodule "site-lisp/tbg-header"]
+	path = site-lisp/tbg-header
+	url = https://github.com/3badguys/tbg-header.git
+[submodule "site-lisp/tbg-jump"]
+	path = site-lisp/tbg-jump
+	url = https://github.com/3badguys/tbg-jump.git
