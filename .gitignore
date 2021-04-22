@@ -12,6 +12,7 @@ bookmarks
 .emacs.desktop
 .emacs.desktop.lock
 ac-comphist.dat
+pyim/
 transient/
 emms/
 *.stackdump

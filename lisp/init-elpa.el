@@ -4,9 +4,8 @@
 
 (require 'cl)
 
-(when (>= emacs-major-version 24)
-  (setq package-archives '(("gnu" . "http://elpa.emacs-china.org/gnu/")
-			               ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+;; (add-to-list 'package-archives '("gnu" . "http://elpa.emacs-china.org/gnu/") t)
+;; (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/") t)
 
 ;; Add Packages
 (defvar 3badguys-emacs/packages '(
@@ -16,6 +15,8 @@
                                   which-key
                                   command-log-mode
                                   company
+                                  pyim
+                                  pyim-basedict
                                   haskell-mode
                                   anaconda-mode
                                   company-anaconda
