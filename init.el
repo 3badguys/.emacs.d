@@ -38,9 +38,6 @@
     (normal-top-level-add-subdirs-to-load-path)))
 (add-subdirs-to-load-path (expand-file-name "site-lisp" user-emacs-directory))
 
-;; Load personal package
-(require 'tbg-header)
-
 ;; Normally file-name-handler-alist is set to
 ;; (("\\`/[^/]*\\'" . tramp-completion-file-name-handler)
 ;; ("\\`/[^/|:][^/|]*:" . tramp-file-name-handler)
@@ -82,7 +79,15 @@
   (load (setq custom-file (expand-file-name "custom.el" user-emacs-directory)) t t)
 
   ;; Allow users to provide an option "init-local" containing presonal settings
-  (require 'init-local nil t))
+  (require 'init-local nil t)
+
+  ;; Load personal tbg-xxx packages
+  (require 'tbg-cloc)
+  (require 'tbg-find-replace)
+  (require 'tbg-header)
+  (require 'tbg-jump)
+  ;;
+  )
 
 ;; Allow access from emacsclient
 (add-hook 'after-init-hook
