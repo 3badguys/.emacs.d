@@ -15,7 +15,12 @@
               (background-color . "white")
               (width . 100)
               (height . 60)))
-           (t nil))
+           (t
+            '(
+              (tool-bar-lines . 0)
+              (background-color . "white")
+              (width . 95)
+              (height . 45))))
         ;; Use tool-bar-lines faster than setting `(tool-bar-mode -1)`
         '((tool-bar-lines . 0))))
 
@@ -24,6 +29,8 @@
  (cond
   ((string-equal system-type "gnu/linux")
    (if (member "DejaVu Sans Mono" (font-family-list)) "DejaVu Sans Mono-8" nil))
+  ((string-equal system-type "windows-nt")
+   (if (member "Consolas" (font-family-list)) "Consolas-9" nil))
   (t nil))
  t t)
 
