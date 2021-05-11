@@ -93,9 +93,10 @@
 (add-hook 'after-init-hook
           (lambda ()
             (require 'server)
-            (when (and (>= emacs-major-version 23)
-                       (equal window-system 'w32))
-              (defun server-ensure-safe-dir (dir) "Noop" t))
+            (and (>= emacs-major-version 23)
+                 (or (equal system-type 'windows-nt)
+                     (equal system-type 'cygwin))
+                 (defun server-ensure-safe-dir (dir) "Noop" t))
             (unless (server-running-p)
               (server-start))))
 
