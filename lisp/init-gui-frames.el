@@ -9,12 +9,18 @@
 (setq default-frame-alist
       (if (display-graphic-p)
           (cond
-           ((string-equal (system-name) "chuic456-debian10")
+           ((string-equal (upcase (system-name)) "CHUIC456-DEBIAN10")
             '(
               (tool-bar-lines . 0)
               (background-color . "white")
               (width . 100)
               (height . 60)))
+           ((string-equal (upcase (system-name)) "CCHHIT-HP")
+            '(
+              (tool-bar-lines . 0)
+              (background-color . "white")
+              (width . 110)
+              (height . 63)))
            (t
             '(
               (tool-bar-lines . 0)
