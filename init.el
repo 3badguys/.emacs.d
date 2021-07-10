@@ -85,7 +85,6 @@
   (require 'tbg-cloc)
   (require 'tbg-find-replace)
   (require 'tbg-header)
-  (require 'tbg-jump)
   ;;
   )
 
