@@ -12,19 +12,19 @@
            ((string-equal (upcase (system-name)) "CHUIC456-DEBIAN10")
             '(
               (tool-bar-lines . 0)
-              (background-color . "white")
+              (background-color . "honeydew")
               (width . 100)
               (height . 60)))
            ((string-equal (upcase (system-name)) "CCHHIT-HP")
             '(
               (tool-bar-lines . 0)
-              (background-color . "white")
+              (background-color . "honeydew")
               (width . 110)
               (height . 63)))
            (t
             '(
               (tool-bar-lines . 0)
-              (background-color . "white")
+              (background-color . "honeydew")
               (width . 95)
               (height . 45))))
         ;; Use tool-bar-lines faster than setting `(tool-bar-mode -1)`
