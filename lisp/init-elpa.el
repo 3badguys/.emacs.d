@@ -22,7 +22,6 @@
                                   exec-path-from-shell
                                   smex
                                   magit
-                                  which-key
                                   command-log-mode
                                   company
                                   pyim

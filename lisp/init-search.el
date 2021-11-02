@@ -52,10 +52,6 @@
   (when (boundp 'ido-minor-mode-map-entry)
     (define-key (cdr ido-minor-mode-map-entry) [remap write-file] nil)))
 
-;; which-key
-(require 'which-key)
-(which-key-mode 1)
-
 ;; recentf, open recently opened file
 (add-hook 'after-init-hook 'recentf-mode)
 (setq recentf-max-menu-items 50)
