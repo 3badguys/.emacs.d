@@ -72,9 +72,6 @@
   (require 'init-python)
   (require 'init-haskell)
 
-  ;; Use alias to shorten commands
-  (require 'init-defalias)
-
   ;; Variables configured via the interactive 'customize' interface
   (load (setq custom-file (expand-file-name "custom.el" user-emacs-directory)) t t)
 
@@ -87,6 +84,8 @@
   (require 'tbg-header)
   ;;
   )
+
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Allow access from emacsclient
 (add-hook 'after-init-hook
