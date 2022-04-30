@@ -37,6 +37,8 @@
    (if (member "DejaVu Sans Mono" (font-family-list)) "DejaVu Sans Mono-8" nil))
   ((string-equal system-type "windows-nt")
    (if (member "Consolas" (font-family-list)) "Consolas-9" nil))
+  ((string-equal system-type "darwin")
+   (if (member "Monaco" (font-family-list)) "Monaco-10" nil))
   (t nil))
  t t)
 
