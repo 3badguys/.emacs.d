@@ -70,7 +70,6 @@
   (require 'init-c)
   (require 'init-perl)
   (require 'init-python)
-  (require 'init-haskell)
 
   ;; Variables configured via the interactive 'customize' interface
   (load (setq custom-file (expand-file-name "custom.el" user-emacs-directory)) t t)
