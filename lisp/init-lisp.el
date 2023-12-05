@@ -4,6 +4,6 @@
 (show-paren-mode 1)
 (setq show-paren-style 'parenthesis)
 
-(require 'xah-elisp-mode)
+;; (require 'xah-elisp-mode)
 
 (provide 'init-lisp)
