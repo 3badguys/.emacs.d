@@ -78,9 +78,9 @@
   (require 'init-local nil t)
 
   ;; Load personal tbg-xxx packages
-  (require 'tbg-cloc)
-  (require 'tbg-find-replace)
-  (require 'tbg-header)
+  ;; (require 'tbg-cloc)
+  ;; (require 'tbg-find-replace)
+  ;; (require 'tbg-header)
   ;;
   )
 
