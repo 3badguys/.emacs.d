@@ -1,0 +1,6 @@
+A emacs package for insert or remove header of elisp source file.
+
+This package provides the follow functions:
+
+- tbg-insert-header
+- tbg-remove-header
