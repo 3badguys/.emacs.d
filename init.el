@@ -85,17 +85,6 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Allow access from emacsclient
-(add-hook 'after-init-hook
-          (lambda ()
-            (require 'server)
-            (and (>= emacs-major-version 23)
-                 (or (equal system-type 'windows-nt)
-                     (equal system-type 'cygwin))
-                 (defun server-ensure-safe-dir (dir) "Noop" t))
-            (unless (server-running-p)
-              (server-start))))
-
 (setq gc-cons-threshold best-gc-cons-threshold)
 
 (when (require 'time-date nil t)
