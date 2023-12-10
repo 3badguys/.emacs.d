@@ -6,19 +6,6 @@ Emacs 于 1975 年诞生在 MIT 人工智能实验室，由 Richard Stallman 开
 + 底层：用 C 语言完成与系统交互和展示部分，并实现了一个 Lisp 解析器
 + 上层：通过 Emacs Lisp 不断扩展自身，其实 Emacs 中绝大多数的操作都是在调用 Emacs Lisp
 
-#+BEGIN_SRC ditaa :file pictures/emacs_frame.png
-  +--------------------+
-  |     Emacs Lisp     |
-  +---------+----------+
-            |
-            |
-  +---------+----------+
-  |  Lisp Interpreter  |
-  +--------------------+
-  |     C Compiler     |
-  +--------------------+
-#+END_SRC
-
 * 使用
 #+BEGIN_SRC shell
   $ emacs -nw # 以no window的方式运行
@@ -35,10 +22,6 @@ Emacs 于 1975 年诞生在 MIT 人工智能实验室，由 Richard Stallman 开
   (print-elements-of-list 3badguys-emacs/packages)
 #+END_SRC
 
-* 参考资料
-+ [[file:reference/GNU%20Emacs%20Reference%20Card.pdf][GNU Emacs Reference Card]]
-+ [[file:reference/Long%20Emacs%20Reference%20Card.pdf][Long Emacs Reference Card]]
-
 * 按键映射
 | 符号 | 键    |
 |------+-------|
@@ -47,11 +30,6 @@ Emacs 于 1975 年诞生在 MIT 人工智能实验室，由 Richard Stallman 开
 | S    | Shift |
 
 * 常用快捷键
-** xah-fly-keys
-参考: http://ergoemacs.org/misc/ergoemacs_vi_mode.html
-*** QWERTY 键盘布局
-[[pictures/xah_fly_keys_layout_qwerty.svg]]
-
 ** 基本操作
 | 快捷键  | 描述                         |
 |---------+------------------------------|
