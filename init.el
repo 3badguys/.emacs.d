@@ -63,7 +63,6 @@
   (require 'init-dired)
   (require 'init-tags)
   (require 'init-company)
-  (require 'init-chinese)
   (require 'init-org)
   (require 'init-lisp)
   (require 'init-c)
