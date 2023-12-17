@@ -2,8 +2,6 @@
 
 (package-initialize)
 
-(require 'cl)
-
 (setq package-archives
       '(
         ;; uncomment below line if you need use GNU ELPA.
@@ -25,9 +23,9 @@
 (setq package-selected-packages 3badguys-emacs/packages)
 
 (defun 3badguys-emacs/packages-installed-p ()
-  (loop for pkg in 3badguys-emacs/packages
-	    when (not (package-installed-p pkg)) do (return nil)
-	    finally (return t)))
+  (cl-loop for pkg in 3badguys-emacs/packages
+	    when (not (package-installed-p pkg)) do (cl-return nil)
+	    finally (cl-return t)))
 
 (unless (3badguys-emacs/packages-installed-p)
   (message "%s" "Refreshing package database...")
