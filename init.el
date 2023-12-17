@@ -47,7 +47,6 @@
   (require 'init-utils)
   ;; Call (package-initialize)
   (require 'init-elpa)      ;; Install required packages
-  (require 'init-exec-path) ;; Set up $PATH
 
   ;; Allow users to provide an optional "init-preload-local.el"
   (require 'init-preload-local nil t)
@@ -62,12 +61,8 @@
   (require 'init-hippie-expand)
   (require 'init-dired)
   (require 'init-tags)
-  (require 'init-company)
   (require 'init-org)
   (require 'init-lisp)
-  (require 'init-c)
-  (require 'init-perl)
-  (require 'init-python)
 
   ;; Variables configured via the interactive 'customize' interface
   (load (setq custom-file (expand-file-name "custom.el" user-emacs-directory)) t t)

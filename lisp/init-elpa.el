@@ -19,17 +19,7 @@
 
 ;; Add Packages
 (defvar 3badguys-emacs/packages '(
-                                  exec-path-from-shell
-                                  smex
-                                  magit
                                   command-log-mode
-                                  company
-                                  pyim
-                                  pyim-basedict
-                                  haskell-mode
-                                  anaconda-mode
-                                  company-anaconda
-                                  htmlize
                                   ) "Default packages")
 
 (setq package-selected-packages 3badguys-emacs/packages)
