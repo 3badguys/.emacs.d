@@ -4,24 +4,17 @@
 ;; |___/ |_.__/ \__,_| \__,_| \__, |  \_,_|  \_, | /__/
 ;;                            |___/          |__/
 
-;;; init.el --- Load the full configuration
+;;; init.el --- Load the full configuration -*- coding: utf-8; lexical-binding: t; -*-
+
+;;; Commentary:
+
+;; This configuration file is divided into a number of other files.
+
+;;; Code:
+
 
 ;; Produce backtraces when errors occur
 (setq debug-on-error t)
-
-;; Check the emacs version
-(let ((minver "24.4"))
-  (when (version< emacs-version minver)
-    (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
-(when (version< emacs-version "25.1")
-  (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
-
-(defvar best-gc-cons-threshold
-  4000000
-  "Best default gc threshold value.  Should NOT be too big!")
-
-;; don't GC during startup to save time
-(setq gc-cons-threshold most-positive-fixnum)
 
 (setq emacs-load-start-time (current-time))
 
@@ -79,10 +72,10 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(setq gc-cons-threshold best-gc-cons-threshold)
-
 (when (require 'time-date nil t)
   (message "Emacs startup time: %d seconds."
            (time-to-seconds (time-since emacs-load-start-time))))
 
 (provide 'init)
+
+;;; init.el ends here
