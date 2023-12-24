@@ -61,9 +61,7 @@ Version 2020-10-26"
          (mod (1+ $pairIdx) (length $widthHeightPairs)))))
 
 ;; some base preferences
-(if (version<= "26.0.50" emacs-version)
-    (global-display-line-numbers-mode)
-  (global-linum-mode t))
+(global-display-line-numbers-mode)
 
 ;; show cursor position within line
 (column-number-mode 1)
