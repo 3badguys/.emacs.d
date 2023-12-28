@@ -16,8 +16,6 @@
 ;; Produce backtraces when errors occur
 (setq debug-on-error t)
 
-(setq emacs-load-start-time (current-time))
-
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-benchmarking)
 
@@ -72,10 +70,6 @@
   )
 
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-(when (require 'time-date nil t)
-  (message "Emacs startup time: %d seconds."
-           (time-to-seconds (time-since emacs-load-start-time))))
 
 (provide 'init)
 
