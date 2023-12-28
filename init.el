@@ -19,6 +19,7 @@
 (setq emacs-load-start-time (current-time))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(require 'init-benchmarking)
 
 ;; Personal information
 (setq user-full-name "3badguys")
