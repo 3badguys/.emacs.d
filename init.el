@@ -19,16 +19,15 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-benchmarking)
 
-;; Personal information
-(setq user-full-name "3badguys")
-(setq user-mail-address "chuiC456@163.com")
-
 ;; Add site-lisp's subdirs to load-path
 (defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path'."
   (let ((default-directory (file-name-as-directory dir)))
     (normal-top-level-add-subdirs-to-load-path)))
 (add-subdirs-to-load-path (expand-file-name "site-lisp" user-emacs-directory))
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 ;; Normally file-name-handler-alist is set to
 ;; (("\\`/[^/]*\\'" . tramp-completion-file-name-handler)
