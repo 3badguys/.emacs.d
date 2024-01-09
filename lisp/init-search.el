@@ -19,8 +19,8 @@
   ;; make buffer switch command do suggestions, also for find-file command
   (require 'ido)
   (ido-mode 1))
-
 (fido-vertical-mode 1)
+(setq completions-detailed t)
 
 ;; recentf, open recently opened file
 (add-hook 'after-init-hook 'recentf-mode)
