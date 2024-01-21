@@ -69,6 +69,9 @@ Version 2020-10-26"
 ;; disable cursor blink
 (blink-cursor-mode 0)
 
+;; disable ring bell
+(setq ring-bell-function 'ignore)
+
 ;; whitespace-mode
 (progn
   ;; Make whitespace-mode with very basic background coloring for whitespaces.
