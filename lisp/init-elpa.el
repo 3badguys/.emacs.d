@@ -15,23 +15,4 @@
         ;;
 ))
 
-;; Add Packages
-(defvar 3badguys-emacs/packages '(
-                                  command-log-mode
-                                  ) "Default packages")
-
-(setq package-selected-packages 3badguys-emacs/packages)
-
-(defun 3badguys-emacs/packages-installed-p ()
-  (cl-loop for pkg in 3badguys-emacs/packages
-	    when (not (package-installed-p pkg)) do (cl-return nil)
-	    finally (cl-return t)))
-
-(unless (3badguys-emacs/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg 3badguys-emacs/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
-
 (provide 'init-elpa)
