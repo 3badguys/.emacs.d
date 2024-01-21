@@ -8,27 +8,9 @@
 ;; initial window and default window
 (setq default-frame-alist
       (if (display-graphic-p)
-          (cond
-           ((string-equal (upcase (system-name)) "CHUIC456-DEBIAN10")
-            '(
-              (tool-bar-lines . 0)
-              (background-color . "honeydew")
-              (width . 100)
-              (height . 60)))
-           ((string-equal (upcase (system-name)) "CCHHIT-HP")
-            '(
-              (tool-bar-lines . 0)
-              (background-color . "honeydew")
-              (width . 110)
-              (height . 63)))
-           (t
-            '(
-              (tool-bar-lines . 0)
-              (background-color . "honeydew")
-              (width . 95)
-              (height . 45))))
-        ;; Use tool-bar-lines faster than setting `(tool-bar-mode -1)`
-        '((tool-bar-lines . 0))))
+          ;; Use tool-bar-lines faster than setting `(tool-bar-mode -1)`
+          '((tool-bar-lines . 0)
+            (background-color . "honeydew"))))
 
 ;; set default font
 (set-frame-font
