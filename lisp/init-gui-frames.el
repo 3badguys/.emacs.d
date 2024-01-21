@@ -42,24 +42,6 @@
   (t nil))
  t t)
 
-(defun tbg-cycle-frame-size ()
-  "Cycle frame size among certain sizes.
-Version 2020-10-26"
-  (interactive)
-  (let (
-        ($widthHeightPairs [[75 45] [55 45] [100 60] [55 60]])
-        $pairIdx $width $height)
-
-    (when (not (get this-command 'pairIdx))
-      (put this-command 'pairIdx 0))
-    (setq $pairIdx (get this-command 'pairIdx))
-
-    (setq $width (elt (elt $widthHeightPairs $pairIdx) 0))
-    (setq $height (elt (elt $widthHeightPairs $pairIdx) 1))
-    (set-frame-size (selected-frame) $width $height)
-    (put this-command 'pairIdx
-         (mod (1+ $pairIdx) (length $widthHeightPairs)))))
-
 ;; some base preferences
 (global-display-line-numbers-mode)
 
@@ -73,7 +55,8 @@ Version 2020-10-26"
 (setq ring-bell-function 'ignore)
 
 ;; set tab-line face attribute
-(set-face-attribute 'tab-line nil :height 1.1)
+(if (display-graphic-p)
+    (set-face-attribute 'tab-line nil :height 1.1))
 
 ;; whitespace-mode
 (progn
