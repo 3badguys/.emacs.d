@@ -72,6 +72,9 @@ Version 2020-10-26"
 ;; disable ring bell
 (setq ring-bell-function 'ignore)
 
+;; set tab-line face attribute
+(set-face-attribute 'tab-line nil :height 1.1)
+
 ;; whitespace-mode
 (progn
   ;; Make whitespace-mode with very basic background coloring for whitespaces.
