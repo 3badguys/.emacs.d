@@ -32,6 +32,9 @@
 ;; for isearch-forward, make these equivalent: space newline tab hyphen underscore
 (setq search-whitespace-regexp "[-_ \t\n]+")
 
+;; display the current command through keycast
+(keycast-header-line-mode)
+
 (defun xah-toggle-search-whitespace ()
   "Set `search-whitespace-regexp' to nil or includes hyphen lowline tab newline.
 Explanation: When in isearch (M-x `isearch-forward'), space key can also stand for other chars such as hyphen lowline tab newline. It depend on a regex. It's convenient. But sometimes you want literal. This command makes it easy to toggle.
