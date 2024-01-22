@@ -38,7 +38,10 @@
 
 ;; set tab-line face attribute
 (if (display-graphic-p)
-    (set-face-attribute 'tab-line nil :height 1.1))
+    (progn
+      (global-tab-line-mode)
+      (set-face-attribute 'tab-line nil :height 1.1))
+  (global-tab-line-mode -1))
 
 ;; whitespace-mode
 (progn
