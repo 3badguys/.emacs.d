@@ -1,7 +1,7 @@
-(define-package "keycast" "1.3.3" "Show current command and its binding"
+(define-package "keycast" "20240117.1559" "Show current command and its binding"
   '((emacs "25.3")
     (compat "29.1.4.1"))
-  :commit "c47fa154c756abd044da4a1353c30b978782f7dc" :authors
+  :commit "5ed2e122ee6fb324336ce12f7f260c404db1290e" :authors
   '(("Jonas Bernoulli" . "jonas@bernoul.li"))
   :maintainers
   '(("Jonas Bernoulli" . "jonas@bernoul.li"))

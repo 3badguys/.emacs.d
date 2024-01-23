@@ -23,5 +23,6 @@ emms/
 .lsp-session-v1
 anaconda-mode/
 places
+*elc
 eln-cache/
 org-persist/
