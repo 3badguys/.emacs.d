@@ -16,8 +16,11 @@
 ;; Produce backtraces when errors occur
 (setq debug-on-error t)
 
+(require 'benchmark-init)
+;; To disable collection of benchmark data after init is done.
+(add-hook 'after-init-hook 'benchmark-init/deactivate)
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(require 'init-benchmarking)
 
 ;; Add site-lisp's subdirs to load-path
 (defun add-subdirs-to-load-path (dir)
