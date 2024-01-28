@@ -16,6 +16,9 @@
 ;; Produce backtraces when errors occur
 (setq debug-on-error t)
 
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 (require 'benchmark-init)
 ;; To disable collection of benchmark data after init is done.
 (add-hook 'after-init-hook 'benchmark-init/deactivate)
@@ -30,9 +33,6 @@
 (add-subdirs-to-load-path (expand-file-name "site-lisp" user-emacs-directory))
 
 ;; Bootstrap config
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
-
 (require 'init-utils)
 (require 'init-elpa)
 
