@@ -33,6 +33,29 @@
 ;; embark
 (setq prefix-help-command #'embark-prefix-help-command)
 
+;; enable indentation+completion using the TAB key
+(setq tab-always-indent 'complete)
+
+;; auto complete through corfu or company mode
+(if (display-graphic-p)
+    (progn
+      (setq corfu-auto t)
+      (setq corfu-cycle t)
+      ;; (setq corfu-separator ?\s)
+      (setq corfu-quit-at-boundary nil)
+      (setq corfu-quit-no-match t)
+      (setq corfu-preview-current nil)
+      (setq corfu-preselect 'prompt)
+      (setq corfu-auto-delay 0.1)
+      (setq corfu-auto-prefix 2)
+      (setq corfu-on-exact-match nil)
+      (setq corfu-scroll-margin 1)
+      (global-corfu-mode 1))
+  (progn
+    (setq company-idle-delay 0.1)
+    (setq company-minimum-prefix-length 2)
+    (global-company-mode 1)))
+
 ;; everytime bookmark is changed, automatically save it
 (setq bookmark-save-flag 1)
 
