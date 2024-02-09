@@ -30,6 +30,8 @@
 (setq completion-styles '(orderless basic))
 ;; marginalia in the minibuffer
 (marginalia-mode 1)
+;; embark
+(setq prefix-help-command #'embark-prefix-help-command)
 
 ;; everytime bookmark is changed, automatically save it
 (setq bookmark-save-flag 1)
