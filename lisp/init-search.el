@@ -20,11 +20,13 @@
   (require 'ido)
   (ido-mode 1))
 (fido-vertical-mode 1)
-(setq completions-detailed t)
 
 ;; recentf, open recently opened file
 (add-hook 'after-init-hook 'recentf-mode)
 (setq recentf-max-menu-items 50)
+
+;; marginalia in the minibuffer
+(marginalia-mode 1)
 
 ;; everytime bookmark is changed, automatically save it
 (setq bookmark-save-flag 1)
