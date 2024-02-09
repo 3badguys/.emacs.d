@@ -19,12 +19,15 @@
   ;; make buffer switch command do suggestions, also for find-file command
   (require 'ido)
   (ido-mode 1))
-(fido-vertical-mode 1)
 
 ;; recentf, open recently opened file
 (add-hook 'after-init-hook 'recentf-mode)
 (setq recentf-max-menu-items 50)
 
+;; vertical completion UI
+(vertico-mode 1)
+;; set orderless completion style
+(setq completion-styles '(orderless basic))
 ;; marginalia in the minibuffer
 (marginalia-mode 1)
 
