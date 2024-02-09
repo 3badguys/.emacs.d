@@ -27,6 +27,9 @@
 ;; some base preferences
 (global-display-line-numbers-mode)
 
+;; highlight the current line
+(global-hl-line-mode 1)
+
 ;; show cursor position within line
 (column-number-mode 1)
 
