@@ -49,7 +49,8 @@
 (require 'init-lisp)
 
 ;; Variables configured via the interactive 'customize' interface
-(load (expand-file-name "custom.el" user-emacs-directory) "NOERROR" "NOMESSAGE")
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file "NOERROR" "NOMESSAGE")
 
 ;; Load personal tbg-xxx packages
 (require 'tbg-cloc)
