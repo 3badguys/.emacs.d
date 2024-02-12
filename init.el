@@ -41,7 +41,6 @@
 (add-subdirs-to-load-path (expand-file-name "site-lisp" user-emacs-directory))
 
 ;; Bootstrap config
-(require 'init-utils)
 (require 'init-xah-fly-keys)
 (require 'init-gui-frames)
 (require 'init-sessions)

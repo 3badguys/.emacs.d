@@ -9,10 +9,9 @@
 ;; let the other dir in the split pane to be default destination
 (setq dired-dwim-target t)
 
-;; http://ergoemacs.org/emacs/emacs_dired_tips.html
 ;; open the file/directory without creating a new buffer
 (put 'dired-find-alternate-file 'disabled nil)
-(after-load 'dired
+(with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
   (define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))))
 
