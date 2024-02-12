@@ -51,7 +51,7 @@
 (require 'init-dired)
 (require 'init-tags)
 (require 'init-org)
-(require 'init-lisp)
+(require 'init-program)
 
 ;; Variables configured via the interactive 'customize' interface
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
