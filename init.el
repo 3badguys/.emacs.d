@@ -47,7 +47,6 @@
 (require 'init-sessions)
 (require 'init-edit-utils)
 (require 'init-search)
-(require 'init-abbrev)
 (require 'init-hippie-expand)
 (require 'init-dired)
 (require 'init-tags)
