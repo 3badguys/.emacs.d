@@ -16,14 +16,22 @@
 ;; Produce backtraces when errors occur
 (setq debug-on-error t)
 
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
-
-(require 'benchmark-init)
-;; To disable collection of benchmark data after init is done.
-(add-hook 'after-init-hook 'benchmark-init/deactivate)
-
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
+;; Firstly set package.el
+(require 'init-elpa)
+
+;; To disable collection of benchmark data after init is done.
+(use-package benchmark-init
+  :ensure t
+  :config
+  (add-hook 'after-init-hook 'benchmark-init/deactivate))
+
+(when (memq window-system '(mac ns))
+  (use-package exec-path-from-shell
+    :ensure t
+    :config
+    (exec-path-from-shell-initialize)))
 
 ;; Add site-lisp's subdirs to load-path
 (defun add-subdirs-to-load-path (dir)
@@ -34,8 +42,6 @@
 
 ;; Bootstrap config
 (require 'init-utils)
-(require 'init-elpa)
-
 (require 'init-xah-fly-keys)
 (require 'init-gui-frames)
 (require 'init-sessions)

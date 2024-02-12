@@ -24,37 +24,63 @@
 (add-hook 'after-init-hook 'recentf-mode)
 (setq recentf-max-menu-items 50)
 
+;; ripgrep
+(when (executable-find "rg")
+  (use-package rg :ensure t))
+
 ;; vertical completion UI
-(vertico-mode 1)
+(use-package vertico
+  :ensure t
+  :hook (after-init . vertico-mode))
+
 ;; set orderless completion style
-(setq completion-styles '(orderless basic))
+(use-package orderless
+  :ensure t
+  :custom
+  (completion-styles '(orderless basic)))
+
 ;; marginalia in the minibuffer
-(marginalia-mode 1)
+(use-package marginalia
+  :ensure t
+  :init
+  (marginalia-mode 1))
+
 ;; embark
-(setq prefix-help-command #'embark-prefix-help-command)
+(use-package embark
+  :ensure t
+  :init
+  (setq prefix-help-command #'embark-prefix-help-command))
+
+;; consulting completing-read
+(use-package consult :ensure t)
+(use-package embark-consult :ensure t)
 
 ;; enable indentation+completion using the TAB key
 (setq tab-always-indent 'complete)
 
 ;; auto complete through corfu or company mode
 (if (display-graphic-p)
-    (progn
-      (setq corfu-auto t)
-      (setq corfu-cycle t)
-      ;; (setq corfu-separator ?\s)
-      (setq corfu-quit-at-boundary nil)
-      (setq corfu-quit-no-match t)
-      (setq corfu-preview-current nil)
-      (setq corfu-preselect 'prompt)
-      (setq corfu-auto-delay 0.1)
-      (setq corfu-auto-prefix 2)
-      (setq corfu-on-exact-match nil)
-      (setq corfu-scroll-margin 1)
-      (global-corfu-mode 1))
-  (progn
+    (use-package corfu
+      :ensure t
+      :custom
+      (corfu-auto t)
+      (corfu-cycle t)
+      ;; (corfu-separator ?\s)
+      (corfu-quit-at-boundary nil)
+      (corfu-quit-no-match t)
+      (corfu-preview-current nil)
+      (corfu-preselect 'prompt)
+      (corfu-auto-delay 0.1)
+      (corfu-auto-prefix 2)
+      (corfu-on-exact-match nil)
+      (corfu-scroll-margin 1)
+      :hook (after-init . global-corfu-mode))
+  (use-package company
+    :ensure t
+    :hook (after-init . global-company-mode)
+    :config
     (setq company-idle-delay 0.1)
-    (setq company-minimum-prefix-length 2)
-    (global-company-mode 1)))
+    (setq company-minimum-prefix-length 2)))
 
 ;; everytime bookmark is changed, automatically save it
 (setq bookmark-save-flag 1)
@@ -63,7 +89,10 @@
 (setq search-whitespace-regexp "[-_ \t\n]+")
 
 ;; display the current command through keycast
-(keycast-header-line-mode)
+(use-package keycast
+  :ensure t
+  :config
+  (keycast-header-line-mode))
 
 (defun xah-toggle-search-whitespace ()
   "Set `search-whitespace-regexp' to nil or includes hyphen lowline tab newline.
