@@ -26,6 +26,7 @@
 
 ;; some base preferences
 (global-display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
 
 ;; highlight the current line
 (global-hl-line-mode 1)
