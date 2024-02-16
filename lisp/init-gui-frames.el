@@ -47,6 +47,10 @@
       (set-face-attribute 'tab-line nil :height 1.1))
   (global-tab-line-mode -1))
 
+;; scroll up screen
+(setq scroll-conservatively 101
+      scroll-margin 2)
+
 ;; whitespace-mode
 (progn
   ;; Make whitespace-mode with very basic background coloring for whitespaces.
